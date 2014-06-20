@@ -1,7 +1,8 @@
 require 'neighborly/dashboard/engine'
 require 'neighborly/dashboard/version'
-require 'ember-rails'
 require 'emblem/rails'
+require 'sass/rails'
+require 'bootstrap-sass'
 
 module Neighborly
   module Dashboard
