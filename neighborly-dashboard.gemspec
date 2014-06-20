@@ -21,4 +21,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rails', '~> 4.0'
   spec.add_dependency 'sass-rails'
   spec.add_dependency 'coffee-rails'
+  spec.add_dependency 'ember-rails', '~> 0.15.0'
+  spec.add_dependency 'emblem-rails', '~> 0.2.1'
 end
