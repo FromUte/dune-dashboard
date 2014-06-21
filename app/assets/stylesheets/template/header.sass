@@ -7,8 +7,7 @@ body > .header
   max-height: 100px
   z-index: 1030
   .navbar
-    +navbar-variant(white #333333 #999999 white)
-    border-bottom: 1px solid #eee
+    background: #333
     height: 50px
     margin-bottom: 0
     margin-left: $left-side-width
@@ -30,14 +29,16 @@ body > .header
     display: block
     width: 22px
     height: 2px
-    background: #444
+    background: #eee
     +border-radius(4px)
   .navbar .sidebar-toggle .icon-bar + .icon-bar
     margin-top: 4px
   //User image in navbar
   .navbar .nav > li.user > a
     font-weight: bold
-    color: #444
+    color: #eee
+    &:hover
+      background: #444
   .navbar .nav > li.user > a > .fa,
   .navbar .nav > li.user > a > .glyphicon,
   .navbar .nav > li.user > a > .ion
@@ -58,22 +59,24 @@ body > .header
   .navbar .nav > li > a:hover > .label
     top: 3px
   //Logo bar - leftside
-  .logo
-    +logo-variant(#333333)
+  .name
+    background: #333333
+    margin: 0
     float: left
     height: 50px
-    font-size: 20px
-    line-height: 50px
     text-align: center
-    padding: 0 10px
+    padding: 10px 10px
     width: $left-side-width
-    font-family: 'Kaushan Script', cursive
-    font-weight: 500
-    height: 50px
-    display: block
-    //For logo imgs or icons
-    .icon
-      margin-right: 10px
+    a
+      display: block
+      margin: auto
+      text-indent: -99999em
+      width: 154px
+      height: 26px
+      background: image-url('neighborly/dashboard/logo@2x.png') center no-repeat
+      background-size: cover
+      padding-left: 0
+
 
 // Content Header
 .right-side > .content-header
