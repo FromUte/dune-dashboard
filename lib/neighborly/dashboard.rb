@@ -10,6 +10,7 @@ require 'ember-auth-response-json-rails'
 require 'ember-auth-strategy-token-rails'
 require 'ember-auth-session-cookie-rails'
 require 'ember-auth-module-ember_data-rails'
+require 'ember-auth-module-auth_redirectable-rails'
 
 module Neighborly
   module Dashboard

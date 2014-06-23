@@ -1,5 +1,5 @@
 Dashboard.Auth = Ember.Auth.extend
-  modules: ['emberData']
+  modules: ['emberData', 'authRedirectable']
   session: 'cookie'
   request: 'jquery'
   response: 'json'
@@ -11,3 +11,5 @@ Dashboard.Auth = Ember.Auth.extend
   signOutEndPoint: Dashboard.ApplicationAdapter.create().buildURL('sessions')
   emberData:
     userModel: 'user'
+  authRedirectable:
+    route: 'sessionsNew'
