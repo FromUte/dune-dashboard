@@ -1,0 +1,7 @@
+form submit='create'
+  label Email
+  = input type='text' value=email
+  label Password
+  = input type='password' value=password
+
+  button Sign In

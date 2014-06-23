@@ -1,6 +1,6 @@
 Dashboard.reopen
   HeaderView: Ember.View.extend
-    templateName: 'header'
+    templateName: 'layouts/header'
 
     didInsertElement: ->
       $('.dropdown-toggle').dropdown()

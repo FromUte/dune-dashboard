@@ -1,9 +1,0 @@
-= render 'header'
-
-.wrapper.row-offcanvas.row-offcanvas-left
-  aside.left-side.sidebar-offcanvas
-    = render 'sidebar'
-
-  aside.right-side
-    section.content
-      = outlet
