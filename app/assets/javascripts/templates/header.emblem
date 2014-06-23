@@ -1,0 +1,24 @@
+header.header
+  h1.name
+    link-to 'index' | Neighbor.ly
+
+  nav.navbar.navbar-static-top role="navigation" 
+    a.navbar-btn.sidebar-toggle data-toggle="offcanvas" href="#" role="button" 
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+
+    .navbar-right
+      ul.nav.navbar-nav
+        li.dropdown.user
+          a.dropdown-toggle data-toggle="dropdown" href="#" 
+            i.glyphicon.glyphicon-user
+            span
+              | Josemar Luedke
+              i.caret
+          ul.dropdown-menu
+            li
+              a href="#"  Profile
+            li
+              a href="#"  Sign out
