@@ -22,14 +22,6 @@ a:hover, a:active, a:focus
   min-height: 100%
   +clearfix
 
-/* Header
-body > .header
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  z-index: 1030
-
 /* Define 2 column template
 .right-side, .left-side
   min-height: 100%
@@ -67,9 +59,9 @@ body > .header
  *  By default the layout is not fixed but if you add the class .fixed to the body element
  *  the sidebar and the navbar will automatically become poisitioned fixed
 body.fixed
-  > .header, .left-side, .navbar
+  header.header, .left-side, .navbar
     position: fixed
-  > .header
+  header.header
     top: 0
     right: 0
     left: 0
