@@ -1,7 +1,14 @@
-form submit='create'
-  label Email
-  = input type='text' value=email
-  label Password
-  = input type='password' value=password
+.form-box
+  .header Sign In
+  form submit='create'
+    .body.bg-gray
+      .form-group
+        = input type='text' value=email placeholder='Email' class='form-control'
+      .form-group
+        = input type='password' value=password placeholder='Password' class='form-control'
+        .text-right
+          a href='https://neighbor.ly/password/new' Did you forget your password?
 
-  button Sign In
+    .footer
+      button.btn.bg-olive.btn-block type='submit' Sign me in
+      a.text-center href='https://neighbor.ly/sign_up' Not in the neighborhood yet? 
