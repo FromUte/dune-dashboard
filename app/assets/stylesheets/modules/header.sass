@@ -1,8 +1,7 @@
 /*
  *    Components: navbar, logo and content header
  *-------------------------------------------------
-
-body > .header
+header.header
   position: relative
   max-height: 100px
   z-index: 1030
@@ -39,6 +38,8 @@ body > .header
     color: #eee
     &:hover
       background: #444
+  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+    background: #444
   .navbar .nav > li.user > a > .fa,
   .navbar .nav > li.user > a > .glyphicon,
   .navbar .nav > li.user > a > .ion
@@ -135,16 +136,16 @@ body > .header
 
 // Collapse header
 @media screen and (max-width: $screen-header-collapse)
-  body > .header
+  header.header
     position: relative
-    .logo, .navbar
+    .name, .navbar
       width: 100%
       float: none
       position: relative !important
     .navbar
       margin: 0
   body.fixed
-    > .header
+    header.header
       position: fixed
     > .wrapper, .sidebar-offcanvas
       margin-top: 100px !important
