@@ -1,3 +1,4 @@
+.bg-black.entire-page
 .form-box
   .header Sign In
   form submit='create'
