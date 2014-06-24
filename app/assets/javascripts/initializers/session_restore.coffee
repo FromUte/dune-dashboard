@@ -11,6 +11,10 @@ Ember.Application.initializer
           sessionStorage.setItem('authToken', auth.get('authToken'))
           sessionStorage.setItem('authUserId', auth.get('userId'))
 
+        auth.addHandler 'signOutSuccess', ->
+          sessionStorage.removeItem('authToken')
+          sessionStorage.removeItem('authUserId')
+
         authToken = sessionStorage.getItem('authToken')
         authUserId = sessionStorage.getItem('authUserId')
 
