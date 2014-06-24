@@ -4,3 +4,4 @@ Dashboard.Router.reopen
 
 Dashboard.Router.map ->
   @route 'sessionsNew', path: 'sessions/new'
+  @route 'sessionsDestroy', path: 'sessions/destroy'

@@ -21,4 +21,4 @@ header.header
             li
               a href="#"  Profile
             li
-              a href="#"  Sign out
+              link-to 'sessionsDestroy' | Sign out
