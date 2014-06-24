@@ -14,3 +14,6 @@
 
 //= require sidebar-tree
 //= require bootstrap/dropdown
+//= require bs-core
+//= require bs-notifications
+
