@@ -4,7 +4,10 @@ Dashboard.SessionsNewController = Ember.Controller.extend
 
   actions:
     create: ->
-      @auth.signIn
+      @auth.signIn(
         data:
           email:    @get 'email'
           password: @get 'password'
+      )
+      .fail ->
+        Bootstrap.NM.push('Invalid email or password.', 'danger')
