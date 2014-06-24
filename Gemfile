@@ -5,6 +5,7 @@ gemspec
 
 group :development, :test do
   gem 'jquery-rails', '~> 3.1.1'
+  gem 'konacha', '~> 3.2.3'
   gem 'capybara'
   gem 'poltergeist'
   gem 'sass-rails', '~> 4.0.3'
