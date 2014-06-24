@@ -46,4 +46,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'ember-auth-module-auth_redirectable-rails'
   spec.add_dependency 'ember-auth-module-auth_redirectable-source', '~> 1.0.3'
+
+  spec.add_dependency 'ember-auth-module-action_redirectable-rails'
+  spec.add_dependency 'ember-auth-module-action_redirectable-source', '~> 1.0.2'
 end

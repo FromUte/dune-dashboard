@@ -7,6 +7,7 @@ Dashboard.Auth = Ember.Auth.extend
   modules: [
     'emberData'
     'authRedirectable'
+    'actionRedirectable'
   ]
 
   tokenKey: 'access_token'
@@ -22,3 +23,7 @@ Dashboard.Auth = Ember.Auth.extend
 
   authRedirectable:
     route: 'sessionsNew'
+
+  actionRedirectable:
+    signInRoute: 'index'
+    signOutRoute: 'sessionsNew'
