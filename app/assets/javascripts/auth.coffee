@@ -27,3 +27,5 @@ Dashboard.Auth = Ember.Auth.extend
   actionRedirectable:
     signInRoute: 'index'
     signOutRoute: 'sessionsNew'
+    signInSmart: true
+    signInBlacklist: ['sessionsNew', 'sessionsDestroy']
