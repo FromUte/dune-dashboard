@@ -1,20 +1,24 @@
-= render 'header'
+if auth.signedIn
 
-.wrapper.row-offcanvas.row-offcanvas-left
-  aside.left-side.sidebar-offcanvas
-    = render 'sidebar'
+  = render 'header'
 
-  aside.right-side
-    section.content-header
-      h1
-        | Dashboard
-        small Control panel
-      ol.breadcrumb
-        li
-          a href="#"
-            i.fa.fa-dashboard
-            | Home
-        li.active Dashboard
+  .wrapper.row-offcanvas.row-offcanvas-left
+    aside.left-side.sidebar-offcanvas
+      = render 'sidebar'
 
-    section.content
-      = outlet
+    aside.right-side
+      section.content-header
+        h1
+          | Dashboard
+          small Control panel
+        ol.breadcrumb
+          li
+            a href="#"
+              i.fa.fa-dashboard
+              | Home
+          li.active Dashboard
+
+      section.content
+        = outlet
+else
+  = outlet
