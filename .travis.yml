@@ -3,8 +3,5 @@ rvm:
 
 cache: bundler
 
-before_script:
-  - 'cd spec/dummy/'
-
 script:
-  - 'bundle exec rake konacha:run'
+  - 'bundle exec rake spec'
