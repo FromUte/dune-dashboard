@@ -4,4 +4,4 @@ Dashboard.SessionsNewRoute = Ember.Route.extend
 
 Dashboard.SessionsDestroyRoute = Ember.Route.extend
   activate: ->
-    @auth.signOut()
+    @auth.signOut().then -> window.location.reload true
