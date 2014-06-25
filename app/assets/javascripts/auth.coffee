@@ -13,7 +13,7 @@ Dashboard.Auth = Ember.Auth.extend
   tokenKey: 'access_token'
   tokenIdKey: 'user_id'
   tokenLocation: 'authHeader'
-  tokenHeaderKey: 'AUTH-TOKEN'
+  tokenHeaderKey: 'Token'
 
   signInEndPoint: Dashboard.ApplicationAdapter.create().buildURL('sessions')
   signOutEndPoint: Dashboard.ApplicationAdapter.create().buildURL('sessions')
