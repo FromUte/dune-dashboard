@@ -25,3 +25,17 @@ desc 'Run Javascript specs using spec:run'
 task :spec do
   Rake::Task['spec:run'].invoke
 end
+
+require 'neighborly/dashboard/i18n'
+
+namespace :i18n do
+  desc 'Export the messages files'
+  task :export do
+    Neighborly::Dashboard::I18n.export!
+  end
+
+  desc 'install ember-i18n.js'
+  task :update do
+    Neighborly::Dashboard::I18n.update!
+  end
+end
