@@ -1,6 +1,6 @@
 # Neighborly::Dashboard
 
-TODO: Write a gem description
+[![Build Status](https://travis-ci.org/neighborly/neighborly-dashboard.svg?branch=master)](https://travis-ci.org/neighborly/neighborly-dashboard)
 
 ## Installation
 
