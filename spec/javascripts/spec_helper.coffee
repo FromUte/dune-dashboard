@@ -6,6 +6,7 @@
 
 #= require neighborly-dashboard-libs
 #= require neighborly-dashboard-application
+#= require neighborly-dashboard-templates
 
 # Prevent the router from manipulating the browser's URL.
 Dashboard.Router.reopen location: 'none'
