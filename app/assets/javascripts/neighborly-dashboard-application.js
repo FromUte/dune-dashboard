@@ -2,6 +2,7 @@
 //= require store
 //= require auth
 //= require_tree ./initializers
+//= require_tree ./i18n
 //= require_tree ./models
 //= require_tree ./controllers
 //= require_tree ./views
