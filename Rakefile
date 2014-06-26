@@ -2,7 +2,7 @@ require "bundler/gem_tasks"
 
 namespace :spec do
   desc 'Run Javascript specs'
-  task :run do
+  task :js do
     system 'cd ./spec/dummy/ && bundle exec rake konacha:run'
   end
 
@@ -14,5 +14,6 @@ end
 
 desc 'Run Javascript specs using spec:run'
 task :spec do
-  Rake::Task['spec:run'].invoke
+  Rake::Task['spec:js'].invoke
+  system 'bundle exec rspec'
 end
