@@ -13,5 +13,5 @@ bs-notifications class='sessions-new'
           a href='https://neighbor.ly/password/new' Did you forget your password?
 
     .footer
-      button.btn.bg-olive.btn-block type='submit' Sign me in
+      input.btn.bg-olive.btn-block type='submit' value='Sign me in'
       a.text-center href='https://neighbor.ly/sign_up' Not in the neighborhood yet? 
