@@ -13,12 +13,12 @@ header.header
       ul.nav.navbar-nav
         li.dropdown.user
           a.dropdown-toggle data-toggle="dropdown" href="#" 
-            i.glyphicon.glyphicon-user
+            img src=auth.user.image_url class='img-circle'
             span
-              | Josemar Luedke
+              auth.user.name
               i.caret
           ul.dropdown-menu
             li
               a href="#"  Profile
             li
-              a href="#"  Sign out
+              link-to 'sessionsDestroy' | Sign out

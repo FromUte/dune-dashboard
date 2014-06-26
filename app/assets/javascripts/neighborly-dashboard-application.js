@@ -1,5 +1,7 @@
 //= require dashboard
-//= require_tree ./store
+//= require store
+//= require auth
+//= require_tree ./initializers
 //= require_tree ./i18n
 //= require_tree ./models
 //= require_tree ./controllers

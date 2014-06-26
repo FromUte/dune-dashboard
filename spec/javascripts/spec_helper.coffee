@@ -6,6 +6,7 @@
 
 #= require neighborly-dashboard-libs
 #= require neighborly-dashboard-application
+#= require neighborly-dashboard-templates
 
 # Prevent the router from manipulating the browser's URL.
 Dashboard.Router.reopen location: 'none'
@@ -41,6 +42,8 @@ Konacha.reset = Ember.K
 beforeEach( (done) ->
   # Fake XHR
   window.server = TestUtil.fakeServer()
+  server.autoRespond = true
+  server.autoRespondAfter = 1
 
   # Prevent automatic scheduling of runloops. For tests, we
   # want to have complete control of runloops.

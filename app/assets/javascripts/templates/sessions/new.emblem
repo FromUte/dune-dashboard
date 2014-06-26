@@ -1,0 +1,17 @@
+bs-notifications class='sessions-new'
+
+.bg-black.entire-page
+.form-box
+  .header = t 'sessions.new.title'
+  form submit='create'
+    .body.bg-gray
+      .form-group
+        = input type='text' value=email placeholderTranslation='sessions.new.email' class='form-control'
+      .form-group
+        = input type='password' value=password placeholderTranslation='sessions.new.password' class='form-control'
+        .text-right
+          a href='https://neighbor.ly/password/new' = t 'sessions.new.forget_password'
+
+    .footer
+      = input type='submit' valueTranslation='sessions.new.submit' class='btn bg-olive btn-block'
+      a.text-center href='https://neighbor.ly/sign_up' = t 'sessions.new.sign-up'
