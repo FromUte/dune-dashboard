@@ -1,11 +1,4 @@
 Ember.I18n.translations = {
-  "sessions.new.title": "Sign In",
-  "sessions.new.submit": "Sign me in",
-  "sessions.new.email": "Email",
-  "sessions.new.password": "Password",
-  "sessions.new.sign-up": "Not in the neighborhood yet?",
-  "sessions.new.forget_password": "Did you forget your password?",
-  "sessions.new.invalid_password": "Invalid email or password.",
   "layouts.sidebar.dashboard": "Dashboard",
   "layouts.sidebar.projects": "Projects",
   "layouts.sidebar.contributions": "Contributions",
@@ -17,5 +10,12 @@ Ember.I18n.translations = {
   "layouts.sidebar.reports": "Reports",
   "layouts.sidebar.financial": "Financial",
   "layouts.header.profile": "Profile",
-  "layouts.header.sign_out": "Sign out"
+  "layouts.header.sign_out": "Sign out",
+  "sessions.new.title": "Sign In",
+  "sessions.new.submit": "Sign me in",
+  "sessions.new.email": "Email",
+  "sessions.new.password": "Password",
+  "sessions.new.sign-up": "Not in the neighborhood yet?",
+  "sessions.new.forget_password": "Did you forget your password?",
+  "sessions.new.invalid_password": "Invalid email or password."
 };

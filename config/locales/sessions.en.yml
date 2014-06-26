@@ -1,0 +1,11 @@
+en:
+  sessions:
+    new:
+      title: 'Sign In'
+      submit: 'Sign me in'
+      email: 'Email'
+      password: 'Password'
+      sign-up: 'Not in the neighborhood yet?'
+      forget_password: 'Did you forget your password?'
+      invalid_password: 'Invalid email or password.'
+
