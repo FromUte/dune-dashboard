@@ -28,25 +28,11 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'ember-auth-rails'
   spec.add_dependency 'ember-auth-source', '~> 9.0.7'
+  ember_auth_modules = %i(request-jquery response-json strategy-token
+                          session-cookie module-ember_data
+                          module-auth_redirectable module-action_redirectable)
 
-  spec.add_dependency 'ember-auth-request-jquery-rails'
-  spec.add_dependency 'ember-auth-request-jquery-source', '~> 1.0.3'
-
-  spec.add_dependency 'ember-auth-response-json-rails'
-  spec.add_dependency 'ember-auth-response-json-source', '~> 1.0.2'
-
-  spec.add_dependency 'ember-auth-strategy-token-rails'
-  spec.add_dependency 'ember-auth-strategy-token-source', '~> 1.0.2'
-
-  spec.add_dependency 'ember-auth-session-cookie-rails'
-  spec.add_dependency 'ember-auth-session-cookie-source', '~> 1.0.1'
-
-  spec.add_dependency 'ember-auth-module-ember_data-rails'
-  spec.add_dependency 'ember-auth-module-ember_data-source', '~> 1.0.2'
-
-  spec.add_dependency 'ember-auth-module-auth_redirectable-rails'
-  spec.add_dependency 'ember-auth-module-auth_redirectable-source', '~> 1.0.3'
-
-  spec.add_dependency 'ember-auth-module-action_redirectable-rails'
-  spec.add_dependency 'ember-auth-module-action_redirectable-source', '~> 1.0.2'
+  ember_auth_modules.each do |m|
+    spec.add_dependency "ember-auth-#{m}-rails"
+  end
 end
