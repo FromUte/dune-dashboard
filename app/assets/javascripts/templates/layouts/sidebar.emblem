@@ -3,42 +3,42 @@ section.sidebar
     li.active
       link-to 'index'
         i.fa.fa-bar-chart-o
-        span Dashboard
+        span = t 'layouts.sidebar.dashboard'
     li
       link-to 'index' 
         i.fa.fa-th-large
-        span Projects
+        span = t 'layouts.sidebar.projects'
     li
       link-to 'index'
         i.fa.fa-credit-card
-        span Contributions
+        span = t 'layouts.sidebar.contributions'
     li
       link-to 'index'
         i.fa.fa-users
-        span Users
+        span = t 'layouts.sidebar.users'
     li
       link-to 'index'
         i.fa.fa-bookmark
-        span Channels
+        span = t 'layouts.sidebar.channels'
     li
       link-to 'index'
         i.fa.fa-tags
-        span Tags
+        span = t 'layouts.sidebar.tags'
     li
       link-to 'index'
         i.fa.fa-file-text
-        span Press Assets
+        span = t 'layouts.sidebar.press_assets'
     li
       link-to 'index'
         i.fa.fa-list
-        span Contacts
+        span = t 'layouts.sidebar.contacts'
     li.treeview
       link-to 'index'
         i.fa.fa-table
-        span Reports
+        span = t 'layouts.sidebar.reports'
         i.fa.fa-angle-left.pull-right
       ul.treeview-menu
         li
           link-to 'index'
             i.fa.fa-money
-            | Financial
+            = t 'layouts.sidebar.financial'

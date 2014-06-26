@@ -5,5 +5,17 @@ Ember.I18n.translations = {
   "sessions.new.password": "Password",
   "sessions.new.sign-up": "Not in the neighborhood yet?",
   "sessions.new.forget_password": "Did you forget your password?",
-  "sessions.new.invalid_password": "Invalid email or password."
+  "sessions.new.invalid_password": "Invalid email or password.",
+  "layouts.sidebar.dashboard": "Dashboard",
+  "layouts.sidebar.projects": "Projects",
+  "layouts.sidebar.contributions": "Contributions",
+  "layouts.sidebar.users": "Users",
+  "layouts.sidebar.channels": "Channels",
+  "layouts.sidebar.tags": "Tags",
+  "layouts.sidebar.press_assets": "Press Assets",
+  "layouts.sidebar.contacts": "Contacts",
+  "layouts.sidebar.reports": "Reports",
+  "layouts.sidebar.financial": "Financial",
+  "layouts.header.profile": "Profile",
+  "layouts.header.sign_out": "Sign out"
 };
