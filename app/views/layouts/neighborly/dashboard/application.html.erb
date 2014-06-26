@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag 'neighborly-dashboard-application' %>
   </head>
   <body class='fixed'>
+    <%= javascript_include_tag 'fix_bind_phantomjs' if Rails.env.test? %>
     <%= javascript_include_tag 'neighborly-dashboard-libs' %>
     <%= javascript_include_tag 'neighborly-dashboard-application' %>
     <%= javascript_include_tag 'neighborly-dashboard-templates' %>
