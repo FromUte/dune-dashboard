@@ -2,16 +2,16 @@ bs-notifications class='sessions-new'
 
 .bg-black.entire-page
 .form-box
-  .header Sign In
+  .header = t 'sessions.new.title'
   form submit='create'
     .body.bg-gray
       .form-group
-        = input type='text' value=email placeholder='Email' class='form-control'
+        = input type='text' value=email placeholderTranslation='sessions.new.email' class='form-control'
       .form-group
-        = input type='password' value=password placeholder='Password' class='form-control'
+        = input type='password' value=password placeholderTranslation='sessions.new.password' class='form-control'
         .text-right
-          a href='https://neighbor.ly/password/new' Did you forget your password?
+          a href='https://neighbor.ly/password/new' = t 'sessions.new.forget_password'
 
     .footer
-      input.btn.bg-olive.btn-block type='submit' value='Sign me in'
-      a.text-center href='https://neighbor.ly/sign_up' Not in the neighborhood yet? 
+      = input type='submit' valueTranslation='sessions.new.submit' class='btn bg-olive btn-block'
+      a.text-center href='https://neighbor.ly/sign_up' = t 'sessions.new.sign-up'
