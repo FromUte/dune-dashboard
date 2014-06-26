@@ -9,5 +9,5 @@ Dashboard.SessionsNewController = Ember.Controller.extend
           email:    @get 'email'
           password: @get 'password'
       )
-      .fail ->
+      .catch ->
         Bootstrap.NM.push('Invalid email or password.', 'danger')
