@@ -42,6 +42,8 @@ Konacha.reset = Ember.K
 beforeEach( (done) ->
   # Fake XHR
   window.server = TestUtil.fakeServer()
+  server.autoRespond = true
+  server.autoRespondAfter = 1
 
   # Prevent automatic scheduling of runloops. For tests, we
   # want to have complete control of runloops.
