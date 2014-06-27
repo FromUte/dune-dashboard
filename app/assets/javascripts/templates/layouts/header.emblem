@@ -19,6 +19,6 @@ header.header
               i.caret
           ul.dropdown-menu
             li
-              a href="#"  Profile
+              a href="#" = t 'layouts.header.profile'
             li
-              link-to 'sessionsDestroy' | Sign out
+              link-to 'sessionsDestroy' | #{t 'layouts.header.sign_out'}
