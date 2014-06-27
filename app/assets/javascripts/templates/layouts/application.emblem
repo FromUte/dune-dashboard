@@ -8,10 +8,7 @@ if auth.signedIn
 
     aside.right-side
       section.content-header
-        h1
-          | Dashboard
-          small Control panel
-
+        page-title
         bs-breadcrumbs
 
       section.content
