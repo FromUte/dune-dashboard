@@ -11,12 +11,8 @@ if auth.signedIn
         h1
           | Dashboard
           small Control panel
-        ol.breadcrumb
-          li
-            a href="#"
-              i.fa.fa-dashboard
-              | Home
-          li.active Dashboard
+
+        bs-breadcrumbs
 
       section.content
         = outlet
