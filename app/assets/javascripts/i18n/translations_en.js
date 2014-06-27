@@ -17,5 +17,7 @@ Ember.I18n.translations = {
   "sessions.new.password": "Password",
   "sessions.new.sign-up": "Not in the neighborhood yet?",
   "sessions.new.forget_password": "Did you forget your password?",
-  "sessions.new.invalid_password": "Invalid email or password."
+  "sessions.new.invalid_password": "Invalid email or password.",
+  "titles.application": "Neighbor.ly",
+  "titles.index": "Dashboard"
 };

@@ -21,8 +21,8 @@ Dashboard.PageTitle = Ember.View.extend
 
       currentRoute = routes.get('router.currentHandlerInfos').pop()
 
-      if currentRoute.handler.title
-        content.pushObject(currentRoute.handler.title)
+      if currentRoute.handler.get('title')
+        content.pushObject(currentRoute.handler.get('title'))
 
       content.reverse()
       @setDocumentTittle(content.join(' - '))
@@ -37,8 +37,8 @@ Dashboard.PageTitle = Ember.View.extend
   appTitle: (routes)->
     title = false
     routes.get('router.currentHandlerInfos').forEach (route) ->
-      if route.handler.routeName == 'application' && route.handler.title
-        title = route.handler.title
+      if route.handler.routeName == 'application' && route.handler.get('title')
+        title = route.handler.get('title')
 
     return title
 
