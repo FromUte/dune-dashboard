@@ -1,11 +1,11 @@
 section.sidebar
   ul.sidebar-menu
-    li.active
+    li
       link-to 'index'
         i.fa.fa-bar-chart-o
         span = t 'layouts.sidebar.dashboard'
     li
-      link-to 'index' 
+      link-to 'projects' 
         i.fa.fa-th-large
         span = t 'layouts.sidebar.projects'
     li
