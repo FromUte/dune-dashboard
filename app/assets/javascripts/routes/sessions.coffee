@@ -1,4 +1,5 @@
 Dashboard.SessionsNewRoute = Ember.Route.extend
+  authRedirectable: false
   renderTemplate: ->
     this.render('sessions/new')
 

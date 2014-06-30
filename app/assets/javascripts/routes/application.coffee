@@ -1,4 +1,6 @@
 Dashboard.ApplicationRoute = Ember.Route.extend
+  authRedirectable: true
+
   breadcrumbs:
     name: 'Dashboard'
     icon: 'fa fa-home'
