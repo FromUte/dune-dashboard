@@ -1,0 +1,7 @@
+en:
+  tags:
+    new:
+      save: 'Create Tag'
+    form:
+      name: 'Name'
+      visible: 'Visible'

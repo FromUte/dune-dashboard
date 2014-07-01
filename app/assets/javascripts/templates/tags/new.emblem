@@ -1,0 +1,4 @@
+form submit='save'
+  = partial 'tags/form'
+  .form-actions
+    = input type='submit' valueTranslation='tags.new.save' class='btn btn-primary'

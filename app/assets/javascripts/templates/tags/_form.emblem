@@ -1,0 +1,9 @@
+.form-group
+  label
+    t 'tags.form.name'
+    = input type='text' value=name class='form-control'
+
+.form-group
+  label
+    t 'tags.form.visible'
+    = input type='checkbox' checked=visible class='form-control'

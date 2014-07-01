@@ -2,3 +2,5 @@ en:
   titles:
     application: 'Neighbor.ly'
     index: 'Dashboard'
+    tags:
+      new: 'New Tag'
