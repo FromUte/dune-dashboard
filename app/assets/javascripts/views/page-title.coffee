@@ -19,7 +19,7 @@ Dashboard.PageTitle = Ember.View.extend
       appTitle = @appTitle(routes)
       content.pushObject(appTitle) if appTitle
 
-      currentRoute = routes.get('router.currentHandlerInfos').pop()
+      currentRoute = routes.get('router.currentHandlerInfos').slice(-1)[0]
 
       if currentRoute.handler.get('title')
         content.pushObject(currentRoute.handler.get('title'))
