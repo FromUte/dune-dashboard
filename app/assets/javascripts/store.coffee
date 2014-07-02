@@ -1,4 +1,4 @@
-Dashboard.ApplicationAdapter = DS.RESTAdapter.extend
+Dashboard.ApplicationAdapter = DS.ActiveModelAdapter.extend
   namespace: 'api'
 
 Dashboard.ApplicationStore = DS.Store.extend
