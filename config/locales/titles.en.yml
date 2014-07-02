@@ -4,3 +4,5 @@ en:
     index: 'Dashboard'
     tags:
       new: 'New Tag'
+      index: 'Tabs'
+      edit: 'Edit Tag'
