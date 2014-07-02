@@ -1,17 +1,24 @@
-.form-group class=errors.name:has-error
-  label
-    t 'tags.form.name'
-    = input type='text' value=name class='form-control'
+form submit='save'
+  .form-group class=errors.name:has-error
+    label
+      t 'tags.form.name'
+      = input type='text' value=name class='form-control'
 
-  each errors.name
-    span.error
-      = message
+    each errors.name
+      span.error
+        = message
 
-.form-group class=errors.visible:has-error
-  label
-    t 'tags.form.visible'
-    = input type='checkbox' checked=visible class='form-control'
+  .form-group class=errors.visible:has-error
+    label
+      t 'tags.form.visible'
+      = input type='checkbox' checked=visible class='form-control'
 
-  each errors.visible
-    span.error
-      = message
+    each errors.visible
+      span.error
+        = message
+
+  .form-actions
+    = input type='submit' valueTranslation='words.save' class='btn btn-primary'
+    |&nbsp;
+    button.btn{action "cancel"}
+      t 'words.cancel'

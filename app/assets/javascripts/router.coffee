@@ -7,6 +7,7 @@ Dashboard.Router.map ->
 
   @resource 'tags', ->
     @route 'new'
+    @route 'edit', path: '/:id/edit'
 
   @route 'sessionsNew', path: 'sessions/new'
   @route 'sessionsDestroy', path: 'sessions/destroy'
