@@ -1,0 +1,17 @@
+.form-group class=errors.name:has-error
+  label
+    t 'tags.form.name'
+    = input type='text' value=name class='form-control'
+
+  each errors.name
+    span.error
+      = message
+
+.form-group class=errors.visible:has-error
+  label
+    t 'tags.form.visible'
+    = input type='checkbox' checked=visible class='form-control'
+
+  each errors.visible
+    span.error
+      = message
