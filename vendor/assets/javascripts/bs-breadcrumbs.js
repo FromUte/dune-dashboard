@@ -52,9 +52,11 @@ THIS COMPPONENT IS CUSTOMIZED!
             displayName = _this.get('nameDictionary')["" + _this.dictionaryNamePrefix + "." + routeName];
             displayIcon = null;
           } else {
-            displayName = route.handler.routeName.split('.').pop();
-            displayName = displayName[0].toUpperCase() + displayName.slice(1).toLowerCase();
-            displayIcon = null;
+            if (route.handler.breadcrumbs != false) {
+              displayName = route.handler.routeName.split('.').pop();
+              displayName = displayName[0].toUpperCase() + displayName.slice(1).toLowerCase();
+              displayIcon = null;
+            }
           }
           crumb = Ember.Object.create({
             route: route.handler.routeName,
@@ -68,7 +70,10 @@ THIS COMPPONENT IS CUSTOMIZED!
               name: route.handler.context.get('name')
             });
           }
-          return _this.get('content').pushObject(crumb);
+          if(displayName){
+            return _this.get('content').pushObject(crumb);
+          }
+          return;
         });
         return this.get('content.lastObject').set('active', true);
       }

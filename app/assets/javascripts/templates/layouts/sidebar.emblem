@@ -21,7 +21,7 @@ section.sidebar
         i.fa.fa-bookmark
         span = t 'layouts.sidebar.channels'
     li
-      link-to 'index'
+      link-to 'tags'
         i.fa.fa-tags
         span = t 'layouts.sidebar.tags'
     li

@@ -6,6 +6,8 @@ Dashboard.Router.map ->
   @resource 'projects', ->
 
   @resource 'tags', ->
+    @route 'filter', path: '/:filter'
+
     @route 'new'
     @route 'edit', path: '/:id/edit'
 

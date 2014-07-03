@@ -20,11 +20,20 @@ Ember.I18n.translations = {
   "sessions.new.invalid_password": "Invalid email or password.",
   "tags.form.name": "Name",
   "tags.form.visible": "Visible",
+  "tags.index.new": "Add a new Tag",
+  "tags.index.popular": "Popular Tags",
+  "tags.index.all": "All Tags",
+  "tags.index.name": "Name",
+  "tags.index.visible": "Visible",
+  "tags.index.total_projects": "Total Projects",
+  "tags.index.no_results": "No Tags just yet. :D",
   "titles.application": "Neighbor.ly",
   "titles.index": "Dashboard",
   "titles.tags.new": "New Tag",
-  "titles.tags.index": "Tabs",
+  "titles.tags.index": "Tags",
   "titles.tags.edit": "Edit Tag",
   "words.save": "Save",
-  "words.cancel": "Cancel"
+  "words.cancel": "Cancel",
+  "words._yes": "Yes",
+  "words._no": "No"
 };
