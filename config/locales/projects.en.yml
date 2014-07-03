@@ -1,0 +1,17 @@
+en:
+  projects:
+    index:
+      tabs:
+        online: 'Online'
+        soon: 'Soon'
+        draft: 'Draft'
+        rejected: 'Rejected'
+        failed: 'Failed'
+        waiting_funds: 'Waiting Funds'
+      table:
+        name: 'Name'
+        user: 'User'
+        goal: 'Goal'
+        pledged: 'Pledged'
+        expires_at: 'Expires at'
+        state: 'State'

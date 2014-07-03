@@ -1,0 +1,58 @@
+.nav-tabs-custom
+  ul.nav.nav-tabs
+    = link-to 'projects.tab' 'online' tagName='li'
+      a href="#"
+        t 'projects.index.tabs.online'
+
+    = link-to 'projects.tab' 'soon' tagName='li'
+      a href="#"
+        t 'projects.index.tabs.soon'
+
+    = link-to 'projects.tab' 'draft' tagName='li'
+      a href="#"
+        t 'projects.index.tabs.draft'
+
+    = link-to 'projects.tab' 'rejected' tagName='li'
+      a href="#"
+        t 'projects.index.tabs.rejected'
+
+    = link-to 'projects.tab' 'failed' tagName='li'
+      a href="#"
+        t 'projects.index.tabs.failed'
+
+    = link-to 'projects.tab' 'waiting_funds' tagName='li'
+      a href="#"
+        t 'projects.index.tabs.waiting_funds'
+
+  if model
+    table.table.table-hover
+      thead
+        tr
+          th
+            t 'projects.index.table.name'
+          th
+            t 'projects.index.table.user'
+          th
+            t 'projects.index.table.goal'
+          th 
+            t 'projects.index.table.pledged'
+          th
+            t 'projects.index.table.expires_at'
+          th
+            t 'projects.index.table.state'
+      tbody
+        each model
+          tr
+            td = name
+            td = user_id
+            td = goal
+            td = pledged
+            td = online_date
+            td = state
+
+    .pagination-wrapper-button
+      pagination-pager count=model.meta.total_pages current=model.meta.page
+
+  else
+    p
+      t 'projects.index.no_results'
