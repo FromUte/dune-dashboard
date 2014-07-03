@@ -15,7 +15,7 @@ Dashboard.PaginatedRouteMixin = Ember.Mixin.create
       @gotoPage current + 1
 
     previousPage: ->
-      current = @get('controller.model.meta.page') or 0
+      current = @get('controller.model.meta.page') or 2
       @gotoPage current - 1
 
     lastPage: ->
