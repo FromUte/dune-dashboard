@@ -2,3 +2,5 @@ en:
   words:
     save: 'Save'
     cancel: 'Cancel'
+    _yes: 'Yes'
+    _no: 'No'
