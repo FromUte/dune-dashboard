@@ -3,3 +3,11 @@ en:
     form:
       name: 'Name'
       visible: 'Visible'
+    index:
+      new: 'Add a new Tag'
+      popular: 'Popular Tags'
+      all: 'All Tags'
+      name: 'Name'
+      visible: 'Visible'
+      total_projects: 'Total Projects'
+      no_results: 'No Tags just yet. :D'

@@ -1,0 +1,43 @@
+.page-controls
+  link-to 'tags.new' class='btn btn-primary'
+    t 'tags.index.new'
+
+.nav-tabs-custom
+  ul.nav.nav-tabs
+    = link-to 'tags.filter' 'popular' tagName='li'
+      a href="#"
+        t 'tags.index.popular'
+    = link-to 'tags.filter' 'all' tagName='li'
+      a href="#"
+        t 'tags.index.all'
+
+  if model
+    table.table.table-hover
+      thead
+        tr
+          th
+            t 'tags.index.name'
+          th
+            t 'tags.index.visible'
+          th
+            t 'tags.index.total_projects'
+          th
+
+      tbody
+        each model
+          tr
+            td = name
+            td
+              show-boolean visible
+            td = total_projects
+            td
+              .text-right
+                = link-to 'tags.edit' id
+                  i.fa.fa-edit
+
+    .text-right
+      pagination-pager count=model.meta.total_pages current=model.meta.page
+
+  else
+    p
+      t 'tags.index.no_results'
