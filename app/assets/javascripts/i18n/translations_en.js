@@ -30,7 +30,7 @@ Ember.I18n.translations = {
   "titles.application": "Neighbor.ly",
   "titles.index": "Dashboard",
   "titles.tags.new": "New Tag",
-  "titles.tags.index": "Tabs",
+  "titles.tags.index": "Tags",
   "titles.tags.edit": "Edit Tag",
   "words.save": "Save",
   "words.cancel": "Cancel",
