@@ -35,7 +35,7 @@
                 = link-to 'tags.edit' id
                   i.fa.fa-edit
 
-    .text-right
+    .pagination-wrapper-button
       pagination-pager count=model.meta.total_pages current=model.meta.page
 
   else
