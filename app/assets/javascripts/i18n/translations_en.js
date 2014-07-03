@@ -32,6 +32,7 @@ Ember.I18n.translations = {
   "titles.tags.new": "New Tag",
   "titles.tags.index": "Tags",
   "titles.tags.edit": "Edit Tag",
+  "words.are_you_sure_to_delete": "Are you sure you want to delete this item?",
   "words.save": "Save",
   "words.cancel": "Cancel",
   "words._yes": "Yes",

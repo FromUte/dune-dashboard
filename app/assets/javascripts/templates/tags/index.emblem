@@ -34,6 +34,9 @@
               .text-right
                 = link-to 'tags.edit' id
                   i.fa.fa-edit
+                | &nbsp;
+                a{action 'destroy' this} href='#'
+                  i.fa.fa-trash-o
 
     .pagination-wrapper-button
       pagination-pager count=model.meta.total_pages current=model.meta.page
