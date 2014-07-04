@@ -48,7 +48,28 @@
             td = goal
             td = pledged
             td = online_date
-            td = state
+            td
+              .dropdown
+                a.btn.btn-xs.dropdown-toggle data-toggle='dropdown' class=state
+                  = state
+                  span.caret
+                ul.dropdown-menu.dropdown-menu-right
+                  li
+                    a href='#' tabindex='-1'
+                      t 'projects.index.actions.approve'
+                  li
+                    a href='#' tabindex='-1'
+                      t 'projects.index.actions.launch'
+                  li
+                    a href='#' tabindex='-1'
+                      t 'projects.index.actions.reject'
+                  li.divider
+                  li
+                    a href='#' tabindex='-1'
+                      t 'projects.index.actions.push_to_draft'
+                  li
+                    a href='#' tabindex='-1'
+                      t 'projects.index.actions.push_to_trash'
 
     .pagination-wrapper-button
       pagination-pager count=model.meta.total_pages current=model.meta.page
