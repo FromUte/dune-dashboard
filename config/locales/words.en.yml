@@ -1,5 +1,6 @@
 en:
   words:
+    are_you_sure_to_delete: 'Are you sure you want to delete this item?'
     save: 'Save'
     cancel: 'Cancel'
     _yes: 'Yes'
