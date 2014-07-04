@@ -34,9 +34,4 @@ namespace :i18n do
   task :export do
     Neighborly::Dashboard::I18n.export!
   end
-
-  desc 'install ember-i18n.js'
-  task :update do
-    Neighborly::Dashboard::I18n.update!
-  end
 end

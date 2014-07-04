@@ -58,12 +58,6 @@ We use [ember-i18n](https://github.com/jamesarosen/ember-i18n) for international
 $ bundle exec rake i18n:export
 ```
 
-We also have a task to update the `ember-i18n` assets:
-
-```
-$ bundle exec rake i18n:update
-```
-
 ## License
 
 Licensed under the [MIT license](LICENSE.txt).
