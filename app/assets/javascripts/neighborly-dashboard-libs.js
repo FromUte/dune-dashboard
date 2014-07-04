@@ -20,3 +20,4 @@
 //= require pagination-pager
 //= require pagination-pager.template
 //= require numeral
+//= require moment
