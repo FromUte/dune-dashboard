@@ -45,8 +45,10 @@
           tr
             td = name
             td = user_id
-            td = goal
-            td = pledged
+            td
+              number-to-currency goal
+            td
+              number-to-currency pledged
             td = online_date
             td
               .dropdown
