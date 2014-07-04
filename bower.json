@@ -1,0 +1,32 @@
+{
+  "name": "neighborly-dashboard",
+  "version": "0.0.0",
+  "homepage": "https://github.com/neighborly/neighborly-dashboard",
+  "authors": [
+    "Josemar Luedke <josemarluedke@gmail.com>"
+  ],
+  "description": "Neighbor.ly Dashboard",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember-i18n": "~2.0.0",
+    "moment": "~2.7.0",
+    "numeral": "~1.5.3",
+    "ember-auth": "~9.0.7",
+    "ember-auth-request-jquery": "~1.0.3",
+    "ember-auth-response-json": "~1.0.2",
+    "ember-auth-strategy-token": "~1.0.2",
+    "ember-auth-session-cookie": "~1.0.1",
+    "ember-auth-module-ember-data": "~1.0.2",
+    "ember-auth-module-auth-redirectable": "~1.0.3",
+    "ember-auth-module-action-redirectable": "~1.0.2"
+  }
+}

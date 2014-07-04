@@ -77,19 +77,6 @@ module Neighborly::Dashboard
       File.file? config_file
     end
 
-    # Retrieve an updated JavaScript library from Github.
-    def update!
-      puts 'Downloading file...'
-      FileUtils.mkdir_p(vendor_dir)
-      require 'open-uri'
-      i18n_contents = open('https://raw.github.com/jamesarosen/ember-i18n/master/lib/i18n.js').read
-      File.open(File.join(vendor_dir, 'ember-i18n-source.js'), 'w+') {|f| f << i18n_contents}
-
-      cldr_contents = open('https://raw.githubusercontent.com/jamesarosen/ember-i18n/master/vendor/cldr-1.0.0.js').read
-      File.open(File.join(vendor_dir, 'cldr-1.0.0.js'), 'w+') {|f| f << cldr_contents}
-      puts 'DONE!'
-    end
-
     # Convert translations to JSON string and save file.
     def save(translations, file)
       file = ::Rails.root.join(file)
