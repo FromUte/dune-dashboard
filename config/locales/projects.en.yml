@@ -1,0 +1,23 @@
+en:
+  projects:
+    index:
+      tabs:
+        online: 'Online'
+        soon: 'Soon'
+        draft: 'Draft'
+        rejected: 'Rejected'
+        failed: 'Failed'
+        waiting_funds: 'Waiting Funds'
+      table:
+        name: 'Name'
+        user: 'User'
+        goal: 'Goal'
+        pledged: 'Pledged'
+        expires_at: 'Expires at'
+        state: 'State'
+      actions:
+        approve: 'Approve!'
+        launch: 'Launch!'
+        reject: 'Reject!'
+        push_to_draft: 'Sent to Draft!'
+        push_to_trash: 'Sent to Trash!'

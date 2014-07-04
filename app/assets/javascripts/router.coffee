@@ -4,6 +4,7 @@ Dashboard.Router.reopen
 
 Dashboard.Router.map ->
   @resource 'projects', ->
+    @route 'tab', path: '/:filter'
 
   @resource 'tags', ->
     @route 'filter', path: '/:filter'
@@ -13,3 +14,4 @@ Dashboard.Router.map ->
 
   @route 'sessionsNew', path: 'sessions/new'
   @route 'sessionsDestroy', path: 'sessions/destroy'
+

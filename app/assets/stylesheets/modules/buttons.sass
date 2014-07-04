@@ -130,3 +130,28 @@
     line-height: 30px
     padding: 0
     +border-radius(50%)
+
+
+.btn.dropdown-toggle
+  span.caret
+    margin-left: 5px
+
+.btn
+  &.online
+    color: #fff
+    @extend .label-success
+  &.draft
+    color: #fff
+    @extend .label-default
+  &.soon
+    color: #fff
+    @extend .label-info
+  &.rejected
+    color: #fff
+    @extend .label-warning
+  &.failed
+    color: #fff
+    @extend .label-danger
+  &.waiting_funds
+    color: #fff
+    @extend .label-primary
