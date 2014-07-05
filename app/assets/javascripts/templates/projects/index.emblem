@@ -43,7 +43,10 @@
       tbody
         each model
           tr
-            td = name
+            td
+              .label.label-default Channel name here
+              | &nbsp; - &nbsp;
+              = name
             td = user_id
             td
               number-to-currency goal
