@@ -4,10 +4,10 @@
 
 .nav-tabs-custom
   ul.nav.nav-tabs
-    = link-to 'tags.filter' 'popular' tagName='li'
+    = link-to 'tags.tab' 'popular' tagName='li'
       a href="#"
         t 'tags.index.popular'
-    = link-to 'tags.filter' 'all' tagName='li'
+    = link-to 'tags.tab' 'all' tagName='li'
       a href="#"
         t 'tags.index.all'
 

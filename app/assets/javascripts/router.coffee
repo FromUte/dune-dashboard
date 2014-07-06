@@ -7,7 +7,7 @@ Dashboard.Router.map ->
     @route 'tab', path: '/:filter'
 
   @resource 'tags', ->
-    @route 'filter', path: '/:filter'
+    @route 'tab', path: '/:filter'
 
     @route 'new'
     @route 'edit', path: '/:id/edit'
