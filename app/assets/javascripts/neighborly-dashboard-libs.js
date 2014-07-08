@@ -10,6 +10,7 @@
 //= require bs-breadcrumbs
 //= require pagination-pager
 //= require pagination-pager.template
+//= require jquery-deparam
 
 
 // *** Bower components ***
