@@ -1,3 +1,5 @@
+= partial 'projects/search-form'
+
 .nav-tabs-custom
   ul.nav.nav-tabs
     = link-to 'projects.tab' 'online' tagName='li'
