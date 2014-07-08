@@ -26,6 +26,8 @@
       a href="#"
         t 'projects.index.tabs.waiting_funds'
 
+    view 'Dashboard.SearchTab' routeName='projects.search'
+
   if model
     table.table.table-hover
       thead

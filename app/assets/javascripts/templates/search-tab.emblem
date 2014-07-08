@@ -1,0 +1,6 @@
+if view.hasSearch
+  = link-to view.routeName view.routeParams tagName='li'
+    a href="#"
+      t 'words.search_results'
+  li
+    i.fa.fa-times.close click='closeSearch' 
