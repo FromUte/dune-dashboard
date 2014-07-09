@@ -10,3 +10,10 @@ Dashboard.ApplicationRoute = Ember.Route.extend
 
   renderTemplate: ->
     this.render('layouts/application')
+
+  actions:
+    loading: ->
+      loading = Dashboard.Loading.activate()
+      @router.one('didTransition', loading, 'deactivate')
+
+      return true
