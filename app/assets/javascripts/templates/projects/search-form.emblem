@@ -1,12 +1,20 @@
-.box
+.box.box-primary
   .box-header
     h3.box-title Search
   form submit='submitSearch'
     .box-body
-      .form-group
-        label
-          | Search
-        = input value=search.pg_search
+      .row
+        .col-md-6
+          .form-group
+            label
+              t 'projects.index.search.query'
+            = input value=search.query class='form-control'
+        .col-md-2
+          daterangepicker labelTranslation='projects.index.search.between_created_at' startBinding='search.between_created_at.starts_at' endBinding='search.between_created_at.ends_at'
+        .col-md-2
+          daterangepicker labelTranslation='projects.index.search.between_expires_at' startBinding='search.between_expires_at.starts_at' endBinding='search.between_expires_at.ends_at'
+        .col-md-2
+          daterangepicker labelTranslation='projects.index.search.between_online_date' startBinding='search.between_online_date.starts_at' endBinding='search.between_online_date.ends_at'
 
     .box-footer
       = input type="submit" class="btn btn-primary"
