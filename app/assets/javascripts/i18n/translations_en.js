@@ -15,6 +15,7 @@ Ember.I18n.translations = {
   "projects.index.tabs.soon": "Soon",
   "projects.index.tabs.draft": "Draft",
   "projects.index.tabs.rejected": "Rejected",
+  "projects.index.tabs.successful": "Successful",
   "projects.index.tabs.failed": "Failed",
   "projects.index.tabs.waiting_funds": "Waiting Funds",
   "projects.index.table.name": "Name",

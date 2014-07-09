@@ -12,13 +12,17 @@
       a href="#"
         t 'projects.index.tabs.draft'
 
-    = link-to 'projects.tab' 'rejected' tagName='li'
+    = link-to 'projects.tab' 'successful' tagName='li'
       a href="#"
-        t 'projects.index.tabs.rejected'
+        t 'projects.index.tabs.successful'
 
     = link-to 'projects.tab' 'failed' tagName='li'
       a href="#"
         t 'projects.index.tabs.failed'
+
+    = link-to 'projects.tab' 'rejected' tagName='li'
+      a href="#"
+        t 'projects.index.tabs.rejected'
 
     = link-to 'projects.tab' 'waiting_funds' tagName='li'
       a href="#"
