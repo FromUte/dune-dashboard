@@ -32,62 +32,62 @@
 
     view 'Dashboard.SearchTab' routeName='projects.search'
 
-  if model
-    table.table.table-hover
-      thead
+  table.table.table-hover
+    thead
+      tr
+        th
+          t 'projects.index.table.name'
+        th
+          t 'projects.index.table.user'
+        th
+          t 'projects.index.table.goal'
+        th
+          t 'projects.index.table.pledged'
+        th
+          t 'projects.index.table.expires_at'
+        th
+          t 'projects.index.table.state'
+    tbody
+      each model
         tr
-          th
-            t 'projects.index.table.name'
-          th
-            t 'projects.index.table.user'
-          th
-            t 'projects.index.table.goal'
-          th 
-            t 'projects.index.table.pledged'
-          th
-            t 'projects.index.table.expires_at'
-          th
-            t 'projects.index.table.state'
-      tbody
-        each model
-          tr
-            td
-              .label.label-default Channel name here
-              | &nbsp; - &nbsp;
-              = name
-            td = user_id
-            td
-              number-to-currency goal
-            td
-              number-to-currency pledged
-            td
-              format-date expires_at
-            td
-              .dropdown
-                a.btn.btn-xs.dropdown-toggle data-toggle='dropdown' class=state
-                  = state
-                  span.caret
-                ul.dropdown-menu.dropdown-menu-right
-                  li
-                    a href='#' tabindex='-1'
-                      t 'projects.index.actions.approve'
-                  li
-                    a href='#' tabindex='-1'
-                      t 'projects.index.actions.launch'
-                  li
-                    a href='#' tabindex='-1'
-                      t 'projects.index.actions.reject'
-                  li.divider
-                  li
-                    a href='#' tabindex='-1'
-                      t 'projects.index.actions.push_to_draft'
-                  li
-                    a href='#' tabindex='-1'
-                      t 'projects.index.actions.push_to_trash'
+          td
+            .label.label-default Channel name here
+            | &nbsp; - &nbsp;
+            = name
+          td = user_id
+          td
+            number-to-currency goal
+          td
+            number-to-currency pledged
+          td
+            format-date expires_at
+          td
+            .dropdown
+              a.btn.btn-xs.dropdown-toggle data-toggle='dropdown' class=state
+                = state
+                span.caret
+              ul.dropdown-menu.dropdown-menu-right
+                li
+                  a href='#' tabindex='-1'
+                    t 'projects.index.actions.approve'
+                li
+                  a href='#' tabindex='-1'
+                    t 'projects.index.actions.launch'
+                li
+                  a href='#' tabindex='-1'
+                    t 'projects.index.actions.reject'
+                li.divider
+                li
+                  a href='#' tabindex='-1'
+                    t 'projects.index.actions.push_to_draft'
+                li
+                  a href='#' tabindex='-1'
+                    t 'projects.index.actions.push_to_trash'
+      else
+        tr
+          td.no-results colspan='6'
+            t 'words.no_results'
 
+  if model
     .pagination-wrapper-button
       pagination-pager count=model.meta.total_pages current=model.meta.page
-
-  else
-    p
-      t 'projects.index.no_results'
