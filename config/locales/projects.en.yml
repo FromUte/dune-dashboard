@@ -6,6 +6,7 @@ en:
         soon: 'Soon'
         draft: 'Draft'
         rejected: 'Rejected'
+        successful: 'Successful'
         failed: 'Failed'
         waiting_funds: 'Waiting Funds'
       table:
