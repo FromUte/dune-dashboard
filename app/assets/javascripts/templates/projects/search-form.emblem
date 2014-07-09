@@ -1,0 +1,12 @@
+.box
+  .box-header
+    h3.box-title Search
+  form submit='submitSearch'
+    .box-body
+      .form-group
+        label
+          | Search
+        = input value=search.pg_search
+
+    .box-footer
+      = input type="submit" class="btn btn-primary"

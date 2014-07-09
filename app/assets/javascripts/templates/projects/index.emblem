@@ -1,3 +1,5 @@
+= partial 'projects/search-form'
+
 .nav-tabs-custom
   ul.nav.nav-tabs
     = link-to 'projects.tab' 'online' tagName='li'
@@ -27,6 +29,8 @@
     = link-to 'projects.tab' 'waiting_funds' tagName='li'
       a href="#"
         t 'projects.index.tabs.waiting_funds'
+
+    view 'Dashboard.SearchTab' routeName='projects.search'
 
   if model
     table.table.table-hover

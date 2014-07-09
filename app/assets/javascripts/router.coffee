@@ -4,6 +4,7 @@ Dashboard.Router.reopen
 
 Dashboard.Router.map ->
   @resource 'projects', ->
+    @route 'search', path: '/search/*query'
     @route 'tab', path: '/:filter'
 
   @resource 'tags', ->

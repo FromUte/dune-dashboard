@@ -14,3 +14,6 @@ Dashboard.ProjectsTabRoute = Ember.Route.extend Dashboard.PaginatedRouteMixin,
     filter[params['filter']] = true
     @store.findQuery('project', filter)
 
+Dashboard.ProjectsSearchRoute = Dashboard.ProjectsTabRoute.extend Dashboard.SearchableRoute,
+  baseRouteName: 'projects'
+  resourceName: 'project'
