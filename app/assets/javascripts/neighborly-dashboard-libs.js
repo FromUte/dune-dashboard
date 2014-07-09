@@ -3,16 +3,6 @@
 //= require ember
 //= require ember-data
 
-//= require sidebar-tree
-//= require bootstrap/dropdown
-//= require bs-core
-//= require bs-notifications
-//= require bs-breadcrumbs
-//= require pagination-pager
-//= require pagination-pager.template
-//= require jquery-deparam
-
-
 // *** Bower components ***
 
 //= require ember-i18n/lib/i18n
@@ -26,3 +16,18 @@
 //= require ember-auth-module-ember-data/dist/ember-auth-module-ember-data
 //= require ember-auth-module-auth-redirectable/dist/ember-auth-module-auth-redirectable
 //= require ember-auth-module-action-redirectable/dist/ember-auth-module-action-redirectable
+
+
+// ** From vendor **
+
+//= require sidebar-tree
+//= require bootstrap/dropdown
+//= require bs-core
+//= require bs-notifications
+//= require bs-breadcrumbs
+//= require pagination-pager
+//= require pagination-pager.template
+//= require jquery-deparam
+//= require daterangepicker
+
+
