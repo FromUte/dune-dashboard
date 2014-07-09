@@ -1,0 +1,5 @@
+label = view.label
+= input class='daterangepicker-input form-control pull-right'
+.hide
+  = input value=view.start
+  = input value=view.end
