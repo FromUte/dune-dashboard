@@ -52,7 +52,6 @@ Dashboard.DaterangepickerView = Ember.View.extend Em.I18n.TranslateablePropertie
 
     @$('.daterangepicker-input').on 'show.daterangepicker', (ev, picker) =>
       if Ember.empty(@get('start')) && Ember.empty(@get('end'))
-        console.log 'aaaaaddddd'
         picker.setStartDate moment()
         picker.setEndDate moment()
 
