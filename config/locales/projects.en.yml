@@ -16,6 +16,9 @@ en:
         pledged: 'Pledged'
         expires_at: 'Expires at'
         state: 'State'
+        recommended: 'Recommended - '
+        featured: 'Featured - '
+        home_page: 'Home Page - '
       actions:
         approve: 'Approve!'
         launch: 'Launch!'
