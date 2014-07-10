@@ -9,11 +9,16 @@ Dashboard.SearchTab = Ember.View.extend
   ).property('controller.searchRouteParams')
 
   hasSearch: (->
-    hasSearch = false
+    hasValues = (values)->
+      results = []
 
-    $.map @get('controller.search'), (value)=>
-      if value != null
-        hasSearch = true
+      $.map values, (value)=>
+        if Ember.typeOf(value) == 'object'
+          results.push hasValues(value)
+        else if !Ember.empty(value)
+          results.push true
 
-    return hasSearch
+      return [].concat.apply([], results)
+
+    return $.inArray(true, hasValues(@get('controller.search'))) != -1
   ).property('controller.search')
