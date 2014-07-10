@@ -22,6 +22,7 @@ en:
         reject: 'Reject!'
         push_to_draft: 'Sent to Draft!'
         push_to_trash: 'Sent to Trash!'
+        are_you_sure_to_launch: 'Are you sure you want to launch this project?'
       search:
         query: 'Search'
         between_created_at: 'Creation Date'

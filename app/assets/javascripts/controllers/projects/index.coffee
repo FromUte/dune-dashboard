@@ -1,4 +1,4 @@
-Dashboard.ProjectsTabController = Ember.Controller.extend Dashboard.SearchableBaseController,
+Dashboard.ProjectsTabController = Ember.ArrayController.extend Dashboard.SearchableBaseController,
   baseRouteName: 'projects'
 
   defaultSearchFields:
@@ -12,6 +12,25 @@ Dashboard.ProjectsTabController = Ember.Controller.extend Dashboard.SearchableBa
     between_online_date:
       starts_at: null
       ends_at: null
+
+  actions:
+    launch: (project)->
+      if window.confirm(Ember.I18n.t('projects.index.actions.are_you_sure_to_launch'))
+        @send('changeState', project, 'launch')
+
+    changeState: (project, action)->
+      projectUrl = Dashboard.ApplicationAdapter.prototype.buildURL('projects', project.id)
+
+      @get('auth').send "#{projectUrl}/#{action}",
+        type: 'PUT'
+
+      @get('target').send('refresh')
+
+    destroy: (project)->
+      if window.confirm(Ember.I18n.t('words.are_you_sure_to_delete'))
+        project.destroyRecord()
+
+        @removeObjects(project)
 
 Dashboard.ProjectsSearchController = Dashboard.ProjectsTabController.extend Dashboard.SearchableController,
   baseRouteName: 'projects'
