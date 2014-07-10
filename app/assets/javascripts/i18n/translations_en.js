@@ -60,5 +60,6 @@ Ember.I18n.translations = {
   "words.cancel": "Cancel",
   "words._yes": "Yes",
   "words._no": "No",
+  "words.search": "Submit Search",
   "words.search_results": "Search Results"
 };

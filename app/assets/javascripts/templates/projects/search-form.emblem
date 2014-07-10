@@ -1,6 +1,4 @@
 .box.box-primary
-  .box-header
-    h3.box-title Search
   form submit='submitSearch'
     .box-body
       .row
@@ -17,4 +15,5 @@
           daterangepicker labelTranslation='projects.index.search.between_online_date' startBinding='search.between_online_date.starts_at' endBinding='search.between_online_date.ends_at'
 
     .box-footer
-      = input type="submit" class="btn btn-primary"
+      .text-right
+        = input type='submit' valueTranslation='words.search' class="btn btn-primary"
