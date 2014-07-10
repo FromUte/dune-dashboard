@@ -54,7 +54,7 @@
             .label.label-default Channel name here
             | &nbsp; - &nbsp;
             = name
-          td = user_id
+          td = user.name
           td
             number-to-currency goal
           td
