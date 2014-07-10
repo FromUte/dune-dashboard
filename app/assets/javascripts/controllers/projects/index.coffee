@@ -1,7 +1,7 @@
 Dashboard.ProjectsTabController = Ember.Controller.extend Dashboard.SearchableBaseController,
   baseRouteName: 'projects'
 
-  search:
+  defaultSearchFields:
     query: null
     between_created_at:
       starts_at: null
