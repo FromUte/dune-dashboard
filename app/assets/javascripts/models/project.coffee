@@ -1,4 +1,5 @@
 Dashboard.Project = DS.Model.extend
+  user: DS.belongsTo('user')
   name: DS.attr('string')
   permalink: DS.attr('string')
   category: DS.attr('string')
