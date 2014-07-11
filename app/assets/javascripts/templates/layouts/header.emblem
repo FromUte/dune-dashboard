@@ -14,7 +14,7 @@ header.header
         li.dropdown.user
           a.dropdown-toggle data-toggle="dropdown" href="#" 
             img src=auth.user.image_url class='img-circle'
-            span
+            span.current-user-name
               auth.user.name
               i.caret
           ul.dropdown-menu
