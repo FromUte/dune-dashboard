@@ -68,20 +68,20 @@
                 span.caret
               ul.dropdown-menu.dropdown-menu-right
                 li
-                  a href='#' tabindex='-1'
+                  a{action 'changeState' this 'approve'} href='#' tabindex='-1'
                     t 'projects.index.actions.approve'
                 li
-                  a href='#' tabindex='-1'
+                  a{action 'launch' this} href='#' tabindex='-1'
                     t 'projects.index.actions.launch'
                 li
-                  a href='#' tabindex='-1'
+                  a{action 'changeState' this 'reject'} href='#' tabindex='-1'
                     t 'projects.index.actions.reject'
                 li.divider
                 li
-                  a href='#' tabindex='-1'
+                  a{action 'changeState' this 'push_to_draft'} href='#' tabindex='-1'
                     t 'projects.index.actions.push_to_draft'
                 li
-                  a href='#' tabindex='-1'
+                  a{action 'destroy' this} href='#' tabindex='-1'
                     t 'projects.index.actions.push_to_trash'
       else
         tr

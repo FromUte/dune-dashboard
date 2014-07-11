@@ -29,6 +29,7 @@ Ember.I18n.translations = {
   "projects.index.actions.reject": "Reject!",
   "projects.index.actions.push_to_draft": "Sent to Draft!",
   "projects.index.actions.push_to_trash": "Sent to Trash!",
+  "projects.index.actions.are_you_sure_to_launch": "Are you sure you want to launch this project?",
   "projects.index.search.query": "Search",
   "projects.index.search.between_created_at": "Creation Date",
   "projects.index.search.between_expires_at": "Expiration Date",
