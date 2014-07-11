@@ -51,3 +51,12 @@ window.stubAjax = (type, url, status, json) ->
 
 $.mockjaxSettings.logging = false
 $.mockjaxSettings.responseTime = 0
+
+window.signInUser = ->
+  Ember.run ->
+    Dashboard.__container__.lookup('auth:main').createSession access_token: 'a', user_id: 1
+
+  stubAjax 'GET', '/api/users/1', 200,
+    {
+      user: { id: 1, name: 'Foo Bar', admin: true }
+    }
