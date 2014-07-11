@@ -9,23 +9,9 @@ load 'rails/tasks/engine.rake'
 
 Bundler::GemHelper.install_tasks
 
-namespace :spec do
-  desc 'Run Javascript specs'
-  task :js do
-    system 'cd ./spec/dummy/ && bundle exec rake konacha:run'
-  end
-
-  desc 'Start server to run Javascript specs'
-  task :serve do
-    system 'cd ./spec/dummy/ && bundle exec rake konacha:serve'
-  end
-end
-
-desc 'Run Javascript specs using spec:run'
-task :spec do
-  Rake::Task['spec:js'].invoke
-  system 'bundle exec rspec'
-end
+desc 'Run the javascript specs'
+task :teaspoon => 'app:teaspoon'
+task :spec => 'app:teaspoon'
 
 require 'neighborly/dashboard/i18n'
 
