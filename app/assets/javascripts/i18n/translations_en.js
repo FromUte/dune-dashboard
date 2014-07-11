@@ -29,6 +29,10 @@ Ember.I18n.translations = {
   "projects.index.actions.reject": "Reject!",
   "projects.index.actions.push_to_draft": "Sent to Draft!",
   "projects.index.actions.push_to_trash": "Sent to Trash!",
+  "projects.index.search.query": "Search",
+  "projects.index.search.between_created_at": "Creation Date",
+  "projects.index.search.between_expires_at": "Expiration Date",
+  "projects.index.search.between_online_date": "Active Date",
   "sessions.new.title": "Sign In",
   "sessions.new.submit": "Sign me in",
   "sessions.new.email": "Email",
@@ -56,5 +60,6 @@ Ember.I18n.translations = {
   "words.cancel": "Cancel",
   "words._yes": "Yes",
   "words._no": "No",
+  "words.search": "Submit Search",
   "words.search_results": "Search Results"
 };

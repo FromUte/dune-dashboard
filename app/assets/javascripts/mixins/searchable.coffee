@@ -21,9 +21,12 @@ Dashboard.SearchableRoute = Ember.Mixin.create
     @store.findQuery(@resourceName, filter)
 
 Dashboard.SearchableBaseController = Ember.Mixin.create
+  defaultSearchFields: {}
   baseRouteName: null
   searchRouteParams: null
-  search: {}
+  search: (->
+    Ember.copy(@get('defaultSearchFields'), true)
+  ).property('defaultSearchFields')
 
   updateSearchRouteParams: (->
     @getController('Search').set('searchRouteParams', $.param(@get('search')))
@@ -37,8 +40,8 @@ Dashboard.SearchableBaseController = Ember.Mixin.create
       @transitionToRoute("#{@baseRouteName}.search", $.param(@get('search')))
 
     closeSearch: ->
-      @getController('Search').set('search', {})
-      @getController('Tab').set('search', {})
+      @getController('Search').set('search', Ember.copy(@get('defaultSearchFields'), true))
+      @getController('Tab').set('search', Ember.copy(@get('defaultSearchFields'), true))
 
       if @constructor.toString().match("#{@baseRouteName.capitalize()}SearchController")
         @transitionToRoute('projects.tab', 'online')

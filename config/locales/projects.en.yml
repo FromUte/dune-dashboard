@@ -22,3 +22,8 @@ en:
         reject: 'Reject!'
         push_to_draft: 'Sent to Draft!'
         push_to_trash: 'Sent to Trash!'
+      search:
+        query: 'Search'
+        between_created_at: 'Creation Date'
+        between_expires_at: 'Expiration Date'
+        between_online_date: 'Active Date'
