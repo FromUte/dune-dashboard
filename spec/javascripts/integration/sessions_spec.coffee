@@ -48,3 +48,15 @@ test 'sessions new sign in fails', ->
   andThen ->
     equal(currentRouteName(), 'sessionsNew')
     equal find('.sessions-new .notification').text(), 'Invalid email or password.'
+
+test 'sessions sign out', ->
+  signInUser()
+
+  stubAjax 'DELETE', '/api/sessions', 200, {}
+
+  visit '/'
+
+  andThen ->
+    click('header .user-sign-out')
+  andThen ->
+    equal(currentRouteName(), 'sessionsNew')

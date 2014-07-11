@@ -21,4 +21,4 @@ header.header
             li
               a href="#" = t 'layouts.header.profile'
             li
-              link-to 'sessionsDestroy' | #{t 'layouts.header.sign_out'}
+              link-to 'sessionsDestroy' class='user-sign-out' | #{t 'layouts.header.sign_out'}
