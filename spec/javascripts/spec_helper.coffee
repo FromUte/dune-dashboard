@@ -40,3 +40,14 @@ document.write('<div id="ember-testing-container"><div id="ember-testing"></div>
 Dashboard.rootElement = '#ember-testing'
 Dashboard.injectTestHelpers()
 Dashboard.setupForTesting()
+
+window.stubAjax = (type, url, status, json) ->
+  return $.mockjax
+    type: type
+    url: url
+    status: status
+    dataType: "json"
+    responseText: json
+
+$.mockjaxSettings.logging = false
+$.mockjaxSettings.responseTime = 0
