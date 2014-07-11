@@ -57,17 +57,17 @@
             if auth.user.admin?
               hr
 
-              .label{bind-attr class='project.recommended:label-success:label-default' }
+              .label{bind-attr class='project.recommended:label-success:label-light' }
                 t 'projects.index.table.recommended'
                 view Dashboard.AutoSaveCheckboxView resource=project attr=project.recommended
               | &nbsp;
 
-              .label{bind-attr class='project.featured:label-info:label-default' }
+              .label{bind-attr class='project.featured:label-info:label-light' }
                 t 'projects.index.table.featured'
                 view Dashboard.AutoSaveCheckboxView resource=project attr=project.featured
               | &nbsp;
 
-              .label{bind-attr class='project.home_page:label-warning:label-default' }
+              .label{bind-attr class='project.home_page:label-warning:label-light' }
                 t 'projects.index.table.home_page'
                 view Dashboard.AutoSaveCheckboxView resource=project attr=project.home_page
 
