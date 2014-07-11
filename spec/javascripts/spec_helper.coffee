@@ -30,6 +30,7 @@
 #= require neighborly-dashboard-application
 #= require neighborly-dashboard-templates
 #= require_tree ./support/
+#= require ember-qunit/dist/globals/main
 
 
 # Prevent the router from manipulating the browser's URL.
@@ -40,6 +41,10 @@ document.write('<div id="ember-testing-container"><div id="ember-testing"></div>
 Dashboard.rootElement = '#ember-testing'
 Dashboard.injectTestHelpers()
 Dashboard.setupForTesting()
+
+# Ember Qunit
+emq.globalize()
+setResolver(Ember.DefaultResolver.create({namespace: Dashboard}))
 
 window.stubAjax = (type, url, status, json) ->
   return $.mockjax
