@@ -1,4 +1,4 @@
-Dashboard.PaginatedRouteMixin = Ember.Mixin.create
+Dashboard.PaginableRouteMixin = Ember.Mixin.create
   actions:
     refreshPageData: (controller, page)->
       query = $.extend(@controller.get('model')['query'], { page: page })
