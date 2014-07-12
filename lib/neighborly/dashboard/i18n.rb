@@ -102,7 +102,7 @@ module Neighborly::Dashboard
     end
 
     def default_locales_path
-      Dir[Neighborly::Dashboard::Engine.root.join('config', 'locales', '*.yml').to_s]
+      Dir[Neighborly::Dashboard::Engine.root.join('config', 'ember_locales', '*.yml').to_s]
     end
   end
 end
