@@ -22,6 +22,9 @@ Neighborly::Dashboard is a Rails Engine, integrating with your ([Neighborly](htt
 mount Neighborly::Dashboard::Engine => '/dashboard/', as: :neighborly_dashboard
 ```
 
+Note that your neighbor.ly app needs to provide the API for the Dashboard. You can find the [Neighbor.ly API here](https://github.com/neighborly/neighborly-api).
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/neighborly/neighborly-dashboard/fork )
