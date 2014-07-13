@@ -15,7 +15,7 @@ Include this gem as dependency of your project, adding the following line in you
 gem 'neighborly-dashboard'
 ```
 
-Neighborly::Dashboard is a Rails Engine, integrating with your (Neighborly) Rails application with very little of effort. To turn the engine on, mount it in an appropriate route:
+Neighborly::Dashboard is a Rails Engine, integrating with your ([Neighborly](https://github.com/neighborly/neighborly)) Rails application with very little of effort. To turn the engine on, mount it in an appropriate route:
 
 ```ruby
 # config/routes.rb
