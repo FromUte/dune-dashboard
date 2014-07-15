@@ -51,8 +51,9 @@
       each project in model
         tr
           td
-            .label.label-default Channel name here
-            | &nbsp; - &nbsp;
+            if project.channel
+              .label.label-default = project.channel.name
+              | &nbsp; - &nbsp;
             = project.name
             if auth.user.admin?
               hr
