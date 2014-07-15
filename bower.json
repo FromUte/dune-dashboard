@@ -28,5 +28,8 @@
     "ember-auth-module-ember-data": "~1.0.2",
     "ember-auth-module-auth-redirectable": "~1.0.3",
     "ember-auth-module-action-redirectable": "~1.0.2"
+  },
+  "devDependencies": {
+    "ember-qunit": "~0.1.8"
   }
 }

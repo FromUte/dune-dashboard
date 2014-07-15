@@ -14,11 +14,11 @@ header.header
         li.dropdown.user
           a.dropdown-toggle data-toggle="dropdown" href="#" 
             img src=auth.user.image_url class='img-circle'
-            span
+            span.current-user-name
               auth.user.name
               i.caret
           ul.dropdown-menu
             li
               a href="#" = t 'layouts.header.profile'
             li
-              link-to 'sessionsDestroy' | #{t 'layouts.header.sign_out'}
+              link-to 'sessionsDestroy' class='user-sign-out' | #{t 'layouts.header.sign_out'}

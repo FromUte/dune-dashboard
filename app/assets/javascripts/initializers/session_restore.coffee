@@ -19,5 +19,5 @@ Ember.Application.initializer
         authUserId = sessionStorage.getItem('authUserId')
 
         if authToken != null && authUserId != null
-          auth.createSession '{"access_token": "' + authToken + '", "user_id": "' + authUserId + '"}'
+          auth.createSession access_token: authToken, user_id: authUserId
     ).create()

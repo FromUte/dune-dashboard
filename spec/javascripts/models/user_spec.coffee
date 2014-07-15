@@ -1,10 +1,3 @@
-#= require spec_helper
-
-describe 'User', ->
-  beforeEach( ->
-    Test.store = TestUtil.lookupStore()
-  )
-
-  it 'is a DS.Model', ->
-    expect(Dashboard.User).to.be.ok
-    expect(DS.Model.detect(Dashboard.User)).to.be.ok
+ test 'User is a DS.Model', ->
+  ok(Dashboard.User)
+  ok(DS.Model.detect(Dashboard.User))
