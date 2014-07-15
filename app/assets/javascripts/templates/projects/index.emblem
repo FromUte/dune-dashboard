@@ -84,22 +84,27 @@
                 = project.state
                 span.caret
               ul.dropdown-menu.dropdown-menu-right
-                li
-                  a{action 'changeState' this 'approve'} href='#' tabindex='-1'
-                    t 'projects.index.actions.approve'
-                li
-                  a{action 'launch' this} href='#' tabindex='-1'
-                    t 'projects.index.actions.launch'
-                li
-                  a{action 'changeState' this 'reject'} href='#' tabindex='-1'
-                    t 'projects.index.actions.reject'
+                if project.rights.can_approve
+                  li
+                    a{action 'changeState' project 'approve'} href='#' tabindex='-1'
+                      t 'projects.index.actions.approve'
+                if project.rights.can_launch
+                  li
+                    a{action 'launch' project} href='#' tabindex='-1'
+                      t 'projects.index.actions.launch'
+                if project.rights.can_reject
+                  li
+                    a{action 'changeState' project 'reject'} href='#' tabindex='-1'
+                      t 'projects.index.actions.reject'
                 li.divider
-                li
-                  a{action 'changeState' this 'push_to_draft'} href='#' tabindex='-1'
-                    t 'projects.index.actions.push_to_draft'
-                li
-                  a{action 'destroy' this} href='#' tabindex='-1'
-                    t 'projects.index.actions.push_to_trash'
+                  if project.rights.can_push_to_draft
+                    li
+                      a{action 'changeState' project 'push_to_draft'} href='#' tabindex='-1'
+                        t 'projects.index.actions.push_to_draft'
+                  if project.rights.can_push_to_trash
+                    li
+                      a{action 'destroy' project} href='#' tabindex='-1'
+                        t 'projects.index.actions.push_to_trash'
       else
         tr
           td.no-results colspan='6'

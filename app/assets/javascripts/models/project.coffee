@@ -11,3 +11,4 @@ Dashboard.Project = DS.Model.extend
   online_date: DS.attr('date')
   expires_at: DS.attr('date')
   state: DS.attr('string')
+  rights: DS.attr('object')
