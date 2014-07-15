@@ -1,5 +1,6 @@
 Dashboard.Project = DS.Model.extend
   user: DS.belongsTo('user')
+  channel: DS.belongsTo('channel')
   name: DS.attr('string')
   permalink: DS.attr('string')
   category: DS.attr('string')
