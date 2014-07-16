@@ -8,3 +8,5 @@ en:
       new: 'New Tag'
       index: 'Tags'
       edit: 'Edit Tag'
+    users:
+      index: 'Users'
