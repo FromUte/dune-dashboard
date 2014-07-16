@@ -13,6 +13,10 @@ Dashboard.Router.map ->
     @route 'new'
     @route 'edit', path: '/:id/edit'
 
+  @resource 'users', ->
+    @route 'tab', path: '/'
+    @route 'search', path: '/search/*query'
+
   @route 'sessionsNew', path: 'sessions/new'
   @route 'sessionsDestroy', path: 'sessions/destroy'
 

@@ -13,7 +13,7 @@ section.sidebar
         i.fa.fa-credit-card
         span = t 'layouts.sidebar.contributions'
     li
-      link-to 'index'
+      link-to 'users'
         i.fa.fa-users
         span = t 'layouts.sidebar.users'
     li
