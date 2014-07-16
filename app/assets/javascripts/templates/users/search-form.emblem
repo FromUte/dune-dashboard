@@ -1,0 +1,13 @@
+.box.box-primary
+  form submit='submitSearch'
+    .box-body
+      .row
+        .col-md-12
+          .form-group
+            label
+              t 'users.index.search.query'
+            = input value=search.query class='form-control'
+
+    .box-footer
+      .text-right
+        = input type='submit' valueTranslation='words.search' class="btn btn-primary"

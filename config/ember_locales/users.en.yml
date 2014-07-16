@@ -1,0 +1,12 @@
+en:
+  users:
+    index:
+      search:
+        query: 'Search'
+      tabs:
+        all: 'All Users'
+      table:
+        name: 'Name'
+        email: 'Email'
+        total_contributed: 'Total Contributed'
+        created_at: 'Created at'
