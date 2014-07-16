@@ -44,7 +44,7 @@ Dashboard.SearchableBaseController = Ember.Mixin.create
       @getController('Tab').set('search', Ember.copy(@get('defaultSearchFields'), true))
 
       if @constructor.toString().match("#{@baseRouteName.capitalize()}SearchController")
-        @transitionToRoute('projects.tab', 'online')
+        @transitionToRoute("#{@baseRouteName}")
 
   getController: (name)->
     Dashboard.__container__.lookup("controller:#{@baseRouteName}#{name}")
