@@ -1,0 +1,10 @@
+ul.pagination
+  li{bind-attr class=':previous view.isFirst:disabled'}
+    a{action 'previousPage'} href="#" «
+
+  each view.pages
+    li{bind-attr class="active disabled"}
+      a{action 'gotoPage' page} href="#" = value
+
+  li{bind-attr class=':next view.isLast:disabled'}
+    a{action 'nextPage'} href="#" »
