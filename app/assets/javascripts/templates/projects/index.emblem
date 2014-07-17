@@ -113,4 +113,3 @@
 
   if model
     .pagination-wrapper-button
-      pagination-pager count=model.meta.total_pages current=model.meta.page

@@ -25,8 +25,6 @@
 //= require bs-core
 //= require bs-notifications
 //= require bs-breadcrumbs
-//= require pagination-pager
-//= require pagination-pager.template
 //= require jquery-deparam
 //= require daterangepicker
 
