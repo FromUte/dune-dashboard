@@ -2,7 +2,7 @@ Dashboard.TagsIndexRoute = Ember.Route.extend
   redirect: ->
     @transitionTo('tags.tab', 'popular')
 
-Dashboard.TagsTabRoute = Ember.Route.extend Dashboard.PaginableRouteMixin,
+Dashboard.TagsTabRoute = Ember.Route.extend
   breadcrumbs: false
   title: Ember.I18n.t('titles.tags.index')
 

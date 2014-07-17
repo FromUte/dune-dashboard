@@ -2,7 +2,7 @@ Dashboard.UsersIndexRoute = Ember.Route.extend
   redirect: ->
     @transitionTo('users.tab')
 
-Dashboard.UsersTabRoute = Ember.Route.extend Dashboard.PaginableRouteMixin,
+Dashboard.UsersTabRoute = Ember.Route.extend
   breadcrumbs: false
   title: Ember.I18n.t('titles.users.index')
 

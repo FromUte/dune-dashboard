@@ -1,4 +1,4 @@
-Dashboard.UsersTabController = Ember.ArrayController.extend Dashboard.SearchableBaseController,
+Dashboard.UsersTabController = Ember.ArrayController.extend Dashboard.SearchableBaseController, Dashboard.PaginableControllerMixin,
   baseRouteName: 'users'
 
   defaultSearchFields:
