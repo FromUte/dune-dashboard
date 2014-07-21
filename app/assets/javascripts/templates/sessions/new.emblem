@@ -1,5 +1,3 @@
-bs-notifications class='sessions-new'
-
 .bg-black.entire-page
 .form-box
   .header = t 'sessions.new.title'
