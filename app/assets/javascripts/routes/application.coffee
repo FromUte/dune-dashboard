@@ -1,3 +1,4 @@
+Dashboard.AuthenticatedRoute = Ember.Route.extend SimpleAuth.AuthenticatedRouteMixin
 
 Dashboard.ApplicationRoute = Ember.Route.extend SimpleAuth.ApplicationRouteMixin,
   breadcrumbs:

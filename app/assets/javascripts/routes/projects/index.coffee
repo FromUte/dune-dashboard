@@ -1,8 +1,8 @@
-Dashboard.ProjectsIndexRoute = Ember.Route.extend
+Dashboard.ProjectsIndexRoute = Dashboard.AuthenticatedRoute.extend
   redirect: ->
     @transitionTo('projects.tab', 'online')
 
-Dashboard.ProjectsTabRoute = Ember.Route.extend
+Dashboard.ProjectsTabRoute = Dashboard.AuthenticatedRoute.extend
   breadcrumbs: false
   title: Ember.I18n.t('titles.projects.index')
 
