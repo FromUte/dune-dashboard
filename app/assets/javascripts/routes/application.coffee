@@ -16,3 +16,7 @@ Dashboard.ApplicationRoute = Ember.Route.extend SimpleAuth.ApplicationRouteMixin
       @router.one('didTransition', loading, 'deactivate')
 
       return true
+
+    sessionAuthenticationFailed: (error)->
+      Bootstrap.NM.set('content', Ember.A())
+      Bootstrap.NM.push(Ember.I18n.t('sessions.new.invalid_password'), 'danger')
