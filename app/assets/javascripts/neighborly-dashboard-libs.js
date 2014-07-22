@@ -8,7 +8,8 @@
 //= require ember-i18n/lib/i18n
 //= require numeral/numeral
 //= require moment/moment
-
+//= require ember-simple-auth/simple-auth
+//= require ember-simple-auth/simple-auth-devise
 
 // ** From vendor **
 
