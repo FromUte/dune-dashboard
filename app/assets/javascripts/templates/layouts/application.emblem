@@ -1,6 +1,6 @@
 bs-notifications
 
-if auth.signedIn
+if session.isAuthenticated
 
   = render 'header'
 
