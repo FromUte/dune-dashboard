@@ -22,44 +22,44 @@ USERS_JSON =
     total: 2
     total_pages: 10
 
-module 'Integration: Users',
-  setup: ->
+describe 'Integration: Users', ->
+  before ->
     signInUser()
     stubAjax 'GET', '/api/users', 200, USERS_JSON
 
-  teardown: ->
+  after ->
     $.mockjaxClear()
 
-test 'page title in the content header', ->
-  expect(1)
+  it 'page title in the content header', ->
+    expect(1)
 
-  visit '/users'
-  andThen ->
-    equal find('.content-header h1').text(), 'Users'
+    visit '/users'
+    andThen ->
+      equal find('.content-header h1').text(), 'Users'
 
-test 'tabs', ->
-  expect(2)
+  it 'tabs', ->
+    expect(2)
 
-  visit '/users'
-  andThen ->
-    equal find('ul.nav-tabs li').length, 1
-    equal find('ul.nav-tabs li.active a').text(), 'All Users'
+    visit '/users'
+    andThen ->
+      equal find('ul.nav-tabs li').length, 1
+      equal find('ul.nav-tabs li.active a').text(), 'All Users'
 
-test 'list the users', ->
-  expect(1)
+  it 'list the users', ->
+    expect(1)
 
-  visit '/users'
-  andThen ->
-    equal find('table tbody tr').length, 2
+    visit '/users'
+    andThen ->
+      equal find('table tbody tr').length, 2
 
-test 'pagination', ->
-  expect(2)
-  sinon.stub(jQuery, 'ajax')
+  it 'pagination', ->
+    expect(2)
+    sinon.stub(jQuery, 'ajax')
 
-  visit '/users'
-  andThen ->
-    equal find('ul.pagination li').length, 11
+    visit '/users'
+    andThen ->
+      equal find('ul.pagination li').length, 11
 
-  andThen ->
-    click('ul.pagination li:eq(3) a')
-    ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: { page: 3 } }))
+    andThen ->
+      click('ul.pagination li:eq(3) a')
+      ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: { page: 3 } }))
