@@ -47,7 +47,7 @@ test 'sessions new sign in fails', ->
 
   andThen ->
     equal(currentRouteName(), 'sessionsNew')
-    equal find('.sessions-new .notification').text(), 'Invalid email or password.'
+    equal find('.notification').text(), 'Invalid email or password.'
 
 test 'sessions sign out', ->
   signInUser()

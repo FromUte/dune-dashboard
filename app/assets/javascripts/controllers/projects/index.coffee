@@ -1,4 +1,4 @@
-Dashboard.ProjectsTabController = Ember.ArrayController.extend Dashboard.SearchableBaseController,
+Dashboard.ProjectsTabController = Ember.ArrayController.extend Dashboard.SearchableBaseController, Dashboard.PaginableControllerMixin,
   baseRouteName: 'projects'
 
   defaultSearchFields:

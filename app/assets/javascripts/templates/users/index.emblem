@@ -1,0 +1,51 @@
+= partial 'users/search-form'
+
+.nav-tabs-custom
+  ul.nav.nav-tabs
+    = link-to 'users.tab' tagName='li'
+      a href="#"
+        t 'users.index.tabs.all'
+
+    view 'Dashboard.SearchTab' routeName='users.search'
+
+  table.table.table-hover
+    thead
+      tr
+        th
+        th
+          t 'users.index.table.name'
+        th
+          t 'users.index.table.email'
+        th
+          t 'users.index.table.total_contributed'
+        th
+          t 'users.index.table.created_at'
+        th
+    tbody
+      each user in model
+        tr
+          td
+            .avatar.small class=user.profile_type
+              a href=user.html_url target='blank'
+                img src=user.image_url class='img-circle'
+          td
+            a href=user.html_url target='blank'
+              = user.name
+          td
+            = user.email
+          td
+            number-to-currency user.total_contributed
+          td
+            format-date user.created_at
+          td
+            .text-right
+              a href=user.edit_html_url target='blank'
+                i.fa.fa-edit
+      else
+        tr
+          td.no-results colspan='6'
+            t 'words.no_results'
+
+  if model
+    .pagination-wrapper-button
+      pagination

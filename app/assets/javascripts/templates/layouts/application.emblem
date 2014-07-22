@@ -1,3 +1,5 @@
+bs-notifications
+
 if auth.signedIn
 
   = render 'header'
