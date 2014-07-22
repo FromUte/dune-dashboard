@@ -13,12 +13,13 @@ header.header
       ul.nav.navbar-nav
         li.dropdown.user
           a.dropdown-toggle data-toggle="dropdown" href="#" 
-            img src=auth.user.image_url class='img-circle'
+            img src=session.currentUser.image_url class='img-circle'
             span.current-user-name
-              auth.user.name
+              session.currentUser.name
               i.caret
           ul.dropdown-menu
             li
               a href="#" = t 'layouts.header.profile'
             li
-              link-to 'sessionsDestroy' class='user-sign-out' | #{t 'layouts.header.sign_out'}
+              a click='invalidateSession' href="#" class='user-sign-out'
+                t 'layouts.header.sign_out'
