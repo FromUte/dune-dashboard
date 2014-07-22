@@ -16,4 +16,4 @@ if session.isAuthenticated
       section.content
         = outlet
 else
-  = outlet
+  = outlet 'login'
