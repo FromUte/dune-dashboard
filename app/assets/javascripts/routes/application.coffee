@@ -1,6 +1,5 @@
-Dashboard.ApplicationRoute = Ember.Route.extend
-  authRedirectable: true
 
+Dashboard.ApplicationRoute = Ember.Route.extend SimpleAuth.ApplicationRouteMixin,
   breadcrumbs:
     name: 'Dashboard'
     icon: 'fa fa-home'
