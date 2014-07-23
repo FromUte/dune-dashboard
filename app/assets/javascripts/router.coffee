@@ -7,6 +7,10 @@ Dashboard.Router.map ->
     @route 'search', path: '/search/*query'
     @route 'tab', path: '/:filter'
 
+  @resource 'contributions', ->
+    @route 'search', path: '/search/*query'
+    @route 'tab', path: '/:filter'
+
   @resource 'tags', ->
     @route 'tab', path: '/:filter'
 
