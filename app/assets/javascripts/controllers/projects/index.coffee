@@ -21,8 +21,7 @@ Dashboard.ProjectsTabController = Ember.ArrayController.extend Dashboard.Searcha
     changeState: (project, action)->
       projectUrl = Dashboard.ApplicationAdapter.prototype.buildURL('projects', project.id)
 
-      @get('auth').send "#{projectUrl}/#{action}",
-        type: 'PUT'
+      $.ajax url: "#{projectUrl}/#{action}", type: 'PUT'
 
       @get('target').send('refresh')
 

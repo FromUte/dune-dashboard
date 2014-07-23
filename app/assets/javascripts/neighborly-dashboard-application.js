@@ -1,6 +1,6 @@
 //= require ./dashboard
 //= require ./store
-//= require ./auth
+//= require ./configs
 //= require_tree ./initializers
 //= require_tree ./serializers
 //= require_tree ./models

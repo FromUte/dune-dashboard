@@ -1,8 +1,8 @@
-Dashboard.TagsIndexRoute = Ember.Route.extend
+Dashboard.TagsIndexRoute = Dashboard.AuthenticatedRoute.extend
   redirect: ->
     @transitionTo('tags.tab', 'popular')
 
-Dashboard.TagsTabRoute = Ember.Route.extend
+Dashboard.TagsTabRoute = Dashboard.AuthenticatedRoute.extend
   breadcrumbs: false
   title: Ember.I18n.t('titles.tags.index')
 

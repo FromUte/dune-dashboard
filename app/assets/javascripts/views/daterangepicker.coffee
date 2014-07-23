@@ -51,10 +51,10 @@ Dashboard.DaterangepickerView = Ember.View.extend Em.I18n.TranslateablePropertie
       @set('end', '')
 
     @$('.daterangepicker-input').on 'show.daterangepicker', (ev, picker) =>
-      if Ember.empty(@get('start')) && Ember.empty(@get('end'))
+      if Ember.isEmpty(@get('start')) && Ember.isEmpty(@get('end'))
         picker.setStartDate moment()
         picker.setEndDate moment()
 
-    if !Ember.empty(@get('start')) && !Ember.empty(@get('end'))
+    if !Ember.isEmpty(@get('start')) && !Ember.isEmpty(@get('end'))
       visibleDate = "#{moment(@get('start')).format(format)} - #{moment(@get('end')).format(format)}"
       @$('.daterangepicker-input').attr 'value', visibleDate

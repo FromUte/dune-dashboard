@@ -54,10 +54,17 @@ $.mockjaxSettings.logging = false
 $.mockjaxSettings.responseTime = 0
 
 window.signInUser = ->
-  Ember.run ->
-    Dashboard.__container__.lookup('auth:main').createSession access_token: 'a', user_id: 1
+  stubAjax 'POST', '/api/sessions', 200,
+    {
+      access_token: 'aa', user_id: 1
+    }
+
+  Dashboard.__container__.lookup('simple-auth-session:main').authenticate('authenticator:custom', {})
 
   stubAjax 'GET', '/api/users/1', 200,
     {
       user: { id: 1, name: 'Foo Bar', admin: true }
     }
+
+window.signOutUser = ->
+  Dashboard.__container__.lookup('simple-auth-session:main').invalidate()

@@ -1,10 +1,10 @@
 .bg-black.entire-page
 .form-box
   .header = t 'sessions.new.title'
-  form submit='create'
+  form submit='authenticate'
     .body.bg-gray
       .form-group
-        = input type='text' value=email placeholderTranslation='sessions.new.email' class='form-control'
+        = input type='text' value=identification placeholderTranslation='sessions.new.email' class='form-control'
       .form-group
         = input type='password' value=password placeholderTranslation='sessions.new.password' class='form-control'
         .text-right

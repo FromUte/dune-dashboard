@@ -3,16 +3,19 @@ describe 'Integration: Sessions', ->
     $.mockjaxClear()
 
   it 'redirects to new session page', ->
+    expect(1)
     visit '/'
     andThen ->
       equal(currentRouteName(), 'sessionsNew')
 
-  it 'sessions new header text', ->
+  it 'header text', ->
+    expect(1)
     visit '/sessions/new'
     andThen ->
       equal find('.header').text(), 'Sign In'
 
-  it 'sessions new sign in succeeds', ->
+  it 'sign in succeeds', ->
+    expect(2)
     stubAjax 'POST', '/api/sessions', 201,
       {
         user_id: 1,
@@ -35,7 +38,9 @@ describe 'Integration: Sessions', ->
       equal(currentRouteName(), 'index')
       equal find('.current-user-name').text(), 'Foo Bar'
 
-  it 'sessions new sign in fails', ->
+  it 'sign in fails', ->
+    signOutUser()
+    expect(2)
     stubAjax 'POST', '/api/sessions', 401, {}
 
     visit '/sessions/new'
@@ -49,7 +54,8 @@ describe 'Integration: Sessions', ->
       equal(currentRouteName(), 'sessionsNew')
       equal find('.notification').text(), 'Invalid email or password.'
 
-  it 'sessions sign out', ->
+  it 'sign out', ->
+    expect(1)
     signInUser()
 
     stubAjax 'DELETE', '/api/sessions', 200, {}
@@ -59,4 +65,4 @@ describe 'Integration: Sessions', ->
     andThen ->
       click('header .user-sign-out')
     andThen ->
-      equal(currentRouteName(), 'sessionsNew')
+      equal(Dashboard.__container__.lookup('simple-auth-session:main').isAuthenticated, false)

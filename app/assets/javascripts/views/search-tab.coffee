@@ -15,7 +15,7 @@ Dashboard.SearchTab = Ember.View.extend
       $.map values, (value)=>
         if Ember.typeOf(value) == 'object'
           results.push hasValues(value)
-        else if !Ember.empty(value)
+        else if !Ember.isEmpty(value)
           results.push true
 
       return [].concat.apply([], results)

@@ -30,20 +30,18 @@ describe 'Integration: Users', ->
   after ->
     $.mockjaxClear()
 
+  it 'has users link on sidebar', ->
+    expect(1)
+    visit '/'
+    andThen ->
+      equal(find(".sidebar-menu a:contains('Users')").length, 1)
+
   it 'page title in the content header', ->
     expect(1)
 
     visit '/users'
     andThen ->
       equal find('.content-header h1').text(), 'Users'
-
-  it 'tabs', ->
-    expect(2)
-
-    visit '/users'
-    andThen ->
-      equal find('ul.nav-tabs li').length, 1
-      equal find('ul.nav-tabs li.active a').text(), 'All Users'
 
   it 'list the users', ->
     expect(1)

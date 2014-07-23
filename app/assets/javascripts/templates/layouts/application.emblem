@@ -1,6 +1,6 @@
 bs-notifications
 
-if auth.signedIn
+if session.isAuthenticated
 
   = render 'header'
 
@@ -16,4 +16,4 @@ if auth.signedIn
       section.content
         = outlet
 else
-  = outlet
+  = outlet 'login'

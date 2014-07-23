@@ -8,15 +8,8 @@
 //= require ember-i18n/lib/i18n
 //= require numeral/numeral
 //= require moment/moment
-//= require ember-auth/dist/ember-auth
-//= require ember-auth-request-jquery/dist/ember-auth-request-jquery
-//= require ember-auth-response-json/dist/ember-auth-response-json
-//= require ember-auth-strategy-token/dist/ember-auth-strategy-token
-//= require ember-auth-session-cookie/dist/ember-auth-session-cookie
-//= require ember-auth-module-ember-data/dist/ember-auth-module-ember-data
-//= require ember-auth-module-auth-redirectable/dist/ember-auth-module-auth-redirectable
-//= require ember-auth-module-action-redirectable/dist/ember-auth-module-action-redirectable
-
+//= require ember-simple-auth/simple-auth
+//= require ember-simple-auth/simple-auth-devise
 
 // ** From vendor **
 
