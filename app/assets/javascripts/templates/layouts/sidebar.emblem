@@ -9,7 +9,7 @@ section.sidebar
         i.fa.fa-th-large
         span = t 'layouts.sidebar.projects'
     li
-      link-to 'index'
+      link-to 'contributions'
         i.fa.fa-credit-card
         span = t 'layouts.sidebar.contributions'
     li
