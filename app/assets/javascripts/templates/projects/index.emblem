@@ -55,7 +55,7 @@
               .label.label-default = project.channel.name
               | &nbsp; - &nbsp;
             = project.name
-            if auth.user.admin?
+            if session.currentUser.admin?
               hr
 
               .label{bind-attr class='project.recommended:label-success:label-light' }
