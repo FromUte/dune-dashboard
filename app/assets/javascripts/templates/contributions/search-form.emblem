@@ -1,0 +1,27 @@
+.box.box-primary
+  form.search submit='submitSearch'
+    .box-body
+      .row
+        .col-md-8
+          .form-group
+            label
+              t 'contributions.index.search.query'
+            = input value=search.query class='form-control'
+        .col-md-4
+          label
+            t 'contributions.index.search.between_values'
+          .row
+            .col-md-6
+              .input-group
+                span.input-group-addon $
+                = input value=search.between_values.initial class='form-control'
+                span.input-group-addon .00
+            .col-md-6
+              .input-group
+                span.input-group-addon $
+                = input value=search.between_values.final class='form-control'
+                span.input-group-addon .00
+
+    .box-footer
+      .text-right
+        = input type='submit' valueTranslation='words.search' class="btn btn-primary"
