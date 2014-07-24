@@ -1,34 +1,11 @@
-USER_JSON =
-  id: 18
-  bio: null
-  created_at: "2014-07-04T12:42:41+00:00"
-  email: "foo@bar.name"
-  facebook_url: null
-  linkedin_url: null
-  other_url: null
-  profile_type: "personal"
-  twitter_url: null
-  name: "Mr. Foo Bar"
-  image_url: "http://neighbor.ly/uploads/user/uploaded_image/18/thumb_avatar_image.jpg"
-  total_contributed: "70.0"
-  admin: false
-  url: "http://neighbor.ly/api/users/18"
-  html_url: "http://neighbor.ly/neighbors/18-mrs-abigayle-gaylord"
-
-USERS_JSON =
-  users: [USER_JSON, USER_JSON]
-  meta:
-    page: 1
-    total: 2
-    total_pages: 10
-
 describe 'Integration: Users', ->
   before ->
     signInUser()
-    stubAjax 'GET', '/api/users', 200, USERS_JSON
+    stubAjax 'GET', '/api/users', 200, FIXTURES.users()
 
   after ->
     $.mockjaxClear()
+    Dashboard.reset()
 
   it 'has users link on sidebar', ->
     expect(1)
@@ -36,7 +13,7 @@ describe 'Integration: Users', ->
     andThen ->
       equal(find(".sidebar-menu a:contains('Users')").length, 1)
 
-  it 'page title in the content header', ->
+  it 'has page title in the content header', ->
     expect(1)
 
     visit '/users'
@@ -50,14 +27,82 @@ describe 'Integration: Users', ->
     andThen ->
       equal find('table tbody tr').length, 2
 
-  it 'pagination', ->
-    expect(2)
-    sinon.stub(jQuery, 'ajax')
+  describe 'pagination', ->
+    before ->
+      sinon.spy(jQuery, 'ajax')
 
-    visit '/users'
-    andThen ->
-      equal find('ul.pagination li').length, 11
+    after ->
+      jQuery.ajax.restore()
 
-    andThen ->
-      click('ul.pagination li:eq(3) a')
-      ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: { page: 3 } }))
+    context 'When clicked on the page number', ->
+      it 'fetch new data filtering by page', ->
+        expect(2)
+
+        visit '/users'
+        andThen ->
+          equal find('ul.pagination li').length, 11
+
+        andThen ->
+          click('ul.pagination li:eq(3) a')
+          ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: { page: 3 } }))
+
+    context 'When clicked on previous page', ->
+      it 'fetch new data filtering by page', ->
+        expect(1)
+
+        visit '/users'
+        andThen ->
+          click('ul.pagination li:first a')
+          ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: { page: 2 } }))
+
+    context 'When clicked on next page', ->
+      it 'fetch new data filtering by page', ->
+        expect(1)
+
+        visit '/users'
+        andThen ->
+          click('ul.pagination li:last a')
+          ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: { page: 4 } }))
+
+  describe 'search', ->
+    before ->
+      sinon.spy(jQuery, 'ajax')
+
+    after ->
+      jQuery.ajax.restore()
+
+    context 'When making the search', ->
+      it 'fetch new data filtering searched value', ->
+        expect(1)
+
+        visit '/users'
+        andThen ->
+          fillIn 'form.search input[type=text]', 'test'
+          click 'form.search .btn'
+        andThen ->
+          ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: 'query=test' }))
+
+      it 'creates a new tab to show the results', ->
+        expect(1)
+
+        visit '/users'
+        andThen ->
+          fillIn 'form.search input[type=text]', 'test'
+          click 'form.search .btn'
+        andThen ->
+          equal(find('.nav-tabs li.active a').text(), 'Search Results')
+
+    context 'When accessing the search directly by url', ->
+      it 'fetch the data filtering by params', ->
+        expect(1)
+
+        visit '/users/search/query=foobar'
+        andThen ->
+          ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: 'query=foobar' }))
+
+      it 'has a search results tab', ->
+        expect(1)
+
+        visit '/users/search/query=foobar'
+        andThen ->
+          equal(find('.nav-tabs li.active a').text(), 'Search Results')

@@ -31,6 +31,7 @@
 #= require neighborly-dashboard-templates
 #= require_tree ./support/
 #= require qunit-bdd/lib/qunit-bdd.js
+#= require_tree ./fixtures
 
 
 # Prevent the router from manipulating the browser's URL.
