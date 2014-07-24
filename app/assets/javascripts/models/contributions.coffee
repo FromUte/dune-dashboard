@@ -4,3 +4,4 @@ Dashboard.Contribution = DS.Model.extend
   value: DS.attr('string')
   anonymous: DS.attr('boolean')
   state: DS.attr('string')
+  rights: DS.attr('object')

@@ -68,7 +68,28 @@
               a.btn.btn-xs.dropdown-toggle data-toggle='dropdown' class=contribution.state
                 = contribution.state
                 span.caret
-
+              ul.dropdown-menu.dropdown-menu-right
+                if contribution.rights.can_confirm
+                  li
+                    a{action 'changeState' contribution 'confirm'} href='#' tabindex='-1'
+                      t 'contributions.index.actions.confirm'
+                if contribution.rights.can_refund
+                  li
+                    a{action 'changeState' contribution 'refund'} href='#' tabindex='-1'
+                      t 'contributions.index.actions.refund'
+                if contribution.rights.can_hide
+                  li
+                    a{action 'changeState' contribution 'hide'} href='#' tabindex='-1'
+                      t 'contributions.index.actions.hide'
+                li.divider
+                  if contribution.rights.can_pendent
+                    li
+                      a{action 'changeState' contribution 'pendent'} href='#' tabindex='-1'
+                        t 'contributions.index.actions.pendent'
+                  if contribution.rights.can_cancel
+                    li
+                      a{action 'changeState' contribution 'cancel'} href='#' tabindex='-1'
+                        t 'contributions.index.actions.cancel'
       else
         tr
           td.no-results colspan='6'
