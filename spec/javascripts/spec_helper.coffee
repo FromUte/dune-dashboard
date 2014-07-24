@@ -68,4 +68,5 @@ window.signInUser = ->
     }
 
 window.signOutUser = ->
-  Dashboard.__container__.lookup('simple-auth-session:main').invalidate()
+  Ember.run ->
+    Dashboard.__container__.lookup('simple-auth-session:main').invalidate()
