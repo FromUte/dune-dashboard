@@ -10,3 +10,5 @@ en:
       edit: 'Edit Tag'
     users:
       index: 'Users'
+    contributions:
+      index: 'Contributions'

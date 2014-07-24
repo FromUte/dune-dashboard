@@ -137,24 +137,24 @@
     margin-left: 5px
 
 .btn
-  &.online
+  &.online, &.pending
     color: #fff
     @extend .label-success
-  &.draft
+  &.draft, &.requested_refund, &.refunded_and_canceled
     color: #fff
     @extend .label-default
-  &.soon
+  &.soon, &.refunded
     color: #fff
     @extend .label-info
-  &.rejected
+  &.rejected, &.canceled
     color: #fff
     @extend .label-warning
-  &.failed
+  &.failed, &.deleted
     color: #fff
     @extend .label-danger
-  &.waiting_funds
+  &.waiting_funds, &.waiting_confirmation
     color: #fff
     @extend .label-warning
-  &.successful
+  &.successful, &.confirmed
     color: #fff
     @extend .label-primary

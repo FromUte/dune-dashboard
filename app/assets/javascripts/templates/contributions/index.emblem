@@ -1,0 +1,80 @@
+= partial 'contributions/search-form'
+
+.nav-tabs-custom
+  ul.nav.nav-tabs
+    = link-to 'contributions.tab' 'pending' tagName='li'
+      a href="#"
+        t 'contributions.index.tabs.pending'
+
+    = link-to 'contributions.tab' 'waiting_confirmation' tagName='li'
+      a href="#"
+        t 'contributions.index.tabs.waiting_confirmation'
+
+    = link-to 'contributions.tab' 'confirmed' tagName='li'
+      a href="#"
+        t 'contributions.index.tabs.confirmed'
+
+    = link-to 'contributions.tab' 'canceled' tagName='li'
+      a href="#"
+        t 'contributions.index.tabs.canceled'
+
+    = link-to 'contributions.tab' 'refunded' tagName='li'
+      a href="#"
+        t 'contributions.index.tabs.refunded'
+
+    = link-to 'contributions.tab' 'requested_refund' tagName='li'
+      a href="#"
+        t 'contributions.index.tabs.requested_refund'
+
+    = link-to 'contributions.tab' 'refunded_and_canceled' tagName='li'
+      a href="#"
+        t 'contributions.index.tabs.refunded_and_canceled'
+
+    view 'Dashboard.SearchTab' routeName='contributions.search'
+
+  table.table.table-hover
+    thead
+      tr
+        th
+          t 'contributions.index.table.project'
+        th
+          t 'contributions.index.table.user'
+        th
+          t 'contributions.index.table.user_email'
+        th
+          t 'contributions.index.table.value'
+        th
+          t 'contributions.index.table.anonymous'
+        th
+          t 'contributions.index.table.state'
+    tbody
+      each contribution in model
+        tr
+          td = contribution.project_id
+          td
+            .avatar.small class=contribution.user.profile_type
+              a href=contribution.user.html_url target='blank'
+                img src=contribution.user.image_url class='img-circle'
+            | &nbsp;
+            a href=contribution.user.html_url target='blank'
+              = contribution.user.name
+          td = contribution.user.email
+          td
+            number-to-currency contribution.value
+          td
+            view Dashboard.AutoSaveCheckboxView resource=contribution attr=contribution.anonymous
+          td
+            .dropdown
+              a.btn.btn-xs.dropdown-toggle data-toggle='dropdown' class=contribution.state
+                = contribution.state
+                span.caret
+
+      else
+        tr
+          td.no-results colspan='6'
+            t 'words.no_results'
+
+  if model
+    .pagination-wrapper-button
+      pagination
+

@@ -1,0 +1,21 @@
+en:
+  contributions:
+    index:
+      tabs:
+        pending: 'Pending'
+        waiting_confirmation: 'Waiting Confirmation'
+        confirmed: 'Confirmed'
+        canceled: 'Canceled'
+        refunded: 'Refunded'
+        requested_refund: 'Requested Refund'
+        refunded_and_canceled: 'Refunded and Canceled'
+      search:
+        query: 'Search'
+        between_values: 'Between Values'
+      table:
+        project: 'Project'
+        user: 'User'
+        user_email: 'User Email'
+        value: 'Value'
+        anonymous: 'Anonymous'
+        state: 'State'
