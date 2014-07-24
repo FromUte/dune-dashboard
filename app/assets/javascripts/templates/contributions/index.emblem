@@ -90,6 +90,10 @@
                     li
                       a{action 'changeState' contribution 'cancel'} href='#' tabindex='-1'
                         t 'contributions.index.actions.cancel'
+                  if contribution.rights.can_push_to_trash
+                    li
+                      a{action 'destroy' contribution} href='#' tabindex='-1'
+                        t 'contributions.index.actions.push_to_trash'
       else
         tr
           td.no-results colspan='6'

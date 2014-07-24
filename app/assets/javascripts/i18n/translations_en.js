@@ -19,6 +19,7 @@ Ember.I18n.translations = {
   "contributions.index.actions.hide": "Hide",
   "contributions.index.actions.cancel": "Cancel",
   "contributions.index.actions.pendent": "Set as Pending",
+  "contributions.index.actions.push_to_trash": "Destroy",
   "layouts.sidebar.dashboard": "Dashboard",
   "layouts.sidebar.projects": "Projects",
   "layouts.sidebar.contributions": "Contributions",

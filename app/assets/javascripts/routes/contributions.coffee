@@ -14,6 +14,10 @@ Dashboard.ContributionsTabRoute = Dashboard.AuthenticatedRoute.extend
     filter[params['filter']] = true
     @store.findQuery('contribution', filter)
 
+  actions:
+    refresh: ->
+      @refresh()
+
 Dashboard.ContributionsSearchRoute = Dashboard.ContributionsTabRoute.extend Dashboard.SearchableRoute,
   baseRouteName: 'contributions'
   resourceName: 'contribution'

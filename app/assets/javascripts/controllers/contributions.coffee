@@ -14,6 +14,11 @@ Dashboard.ContributionsTabController = Ember.ArrayController.extend Dashboard.Se
 
       @get('target').send('refresh')
 
+    destroy: (contribution)->
+      if window.confirm(Ember.I18n.t('words.are_you_sure_to_delete'))
+        contribution.destroyRecord()
+
+        @removeObjects(contribution)
 
 Dashboard.ContributionsSearchController = Dashboard.ContributionsTabController.extend Dashboard.SearchableController,
   baseRouteName: 'contributions'

@@ -25,3 +25,4 @@ en:
         hide: 'Hide'
         cancel: 'Cancel'
         pendent: 'Set as Pending'
+        push_to_trash: 'Destroy'
