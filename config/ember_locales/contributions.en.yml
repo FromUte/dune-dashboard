@@ -19,3 +19,10 @@ en:
         value: 'Value'
         anonymous: 'Anonymous'
         state: 'State'
+      actions:
+        confirm: 'Confirm'
+        refund: 'Refund'
+        hide: 'Hide'
+        cancel: 'Cancel'
+        pendent: 'Set as Pending'
+        push_to_trash: 'Destroy'
