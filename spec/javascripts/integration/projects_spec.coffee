@@ -1,29 +1,29 @@
-describe 'Integration: Users', ->
+describe 'Integration: Projects', ->
   before ->
     authenticateSession()
-    stubAjax 'GET', '/api/users', 200, FIXTURES.users()
+    stubAjax 'GET', '/api/projects', 200, FIXTURES.projects()
 
   after ->
     $.mockjaxClear()
     Dashboard.reset()
 
-  it 'has users link on sidebar', ->
+  it 'has projects link on sidebar', ->
     expect(1)
     visit '/'
     andThen ->
-      equal(find(".sidebar-menu a:contains('Users')").length, 1)
+      equal(find(".sidebar-menu a:contains('Projects')").length, 1)
 
   it 'has page title in the content header', ->
     expect(1)
 
-    visit '/users'
+    visit '/projects'
     andThen ->
-      equal find('.content-header h1').text(), 'Users'
+      equal find('.content-header h1').text(), 'Projects'
 
-  it 'list the users', ->
+  it 'list the projects', ->
     expect(1)
 
-    visit '/users'
+    visit '/projects'
     andThen ->
       equal find('table tbody tr').length, 2
 
@@ -38,31 +38,31 @@ describe 'Integration: Users', ->
       it 'fetch new data filtering by page', ->
         expect(2)
 
-        visit '/users'
+        visit '/projects'
         andThen ->
           equal find('ul.pagination li').length, 11
 
         andThen ->
           click('ul.pagination li:eq(3) a')
-          ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: { page: 3 } }))
+          ok(jQuery.ajax.calledWithMatch({ url: '/api/projects', data: { page: 3 } }))
 
     context 'When clicked on previous page', ->
       it 'fetch new data filtering by page', ->
         expect(1)
 
-        visit '/users'
+        visit '/projects'
         andThen ->
           click('ul.pagination li:first a')
-          ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: { page: 2 } }))
+          ok(jQuery.ajax.calledWithMatch({ url: '/api/projects', data: { page: 2 } }))
 
     context 'When clicked on next page', ->
       it 'fetch new data filtering by page', ->
         expect(1)
 
-        visit '/users'
+        visit '/projects'
         andThen ->
           click('ul.pagination li:last a')
-          ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: { page: 4 } }))
+          ok(jQuery.ajax.calledWithMatch({ url: '/api/projects', data: { page: 4 } }))
 
   describe 'search', ->
     before ->
@@ -75,17 +75,18 @@ describe 'Integration: Users', ->
       it 'fetch new data filtering searched value', ->
         expect(1)
 
-        visit '/users'
+        visit '/projects'
         andThen ->
           fillIn 'form.search input[type=text]', 'test'
           click 'form.search .btn'
         andThen ->
-          ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: 'query=test' }))
+          data = "query=test&between_created_at%5Bstarts_at%5D=test&between_created_at%5Bends_at%5D=test&between_expires_at%5Bstarts_at%5D=test&between_expires_at%5Bends_at%5D=test&between_online_date%5Bstarts_at%5D=test&between_online_date%5Bends_at%5D=test"
+          ok(jQuery.ajax.calledWithMatch({ url: '/api/projects', data: data }))
 
       it 'creates a new tab to show the results', ->
         expect(1)
 
-        visit '/users'
+        visit '/projects'
         andThen ->
           fillIn 'form.search input[type=text]', 'test'
           click 'form.search .btn'
@@ -96,13 +97,14 @@ describe 'Integration: Users', ->
       it 'fetch the data filtering by params', ->
         expect(1)
 
-        visit '/users/search/query=foobar'
+        visit '/projects/search/query=foobar'
         andThen ->
-          ok(jQuery.ajax.calledWithMatch({ url: '/api/users', data: 'query=foobar' }))
+          ok(jQuery.ajax.calledWithMatch({ url: '/api/projects', data: 'query=foobar' }))
 
       it 'has a search results tab', ->
         expect(1)
 
-        visit '/users/search/query=foobar'
+        visit '/projects/search/query=foobar'
         andThen ->
           equal(find('.nav-tabs li.active a').text(), 'Search Results')
+
