@@ -20,7 +20,7 @@ Currently a single notification is displayed as an Alert on top of the screen, e
         typeBinding: 'content.type'
         fadeInTimeBinding: 'parentView.fadeInTime'
         isVisible: false
-    
+
         didInsertElement: ->
             @$().fadeIn(@get('fadeInTime'))
     )
@@ -40,7 +40,7 @@ Currently a single notification is displayed as an Alert on top of the screen, e
     }),
     contentChanged: (function() {
       if (this.get('content').length > 0) {
-        return this.resetShowTime();
+        //return this.resetShowTime();
       }
     }).observes('content.length'),
     resetShowTime: function() {
