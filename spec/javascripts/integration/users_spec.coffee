@@ -1,9 +1,10 @@
 describe 'Integration: Users', ->
   before ->
-    signInUser()
+    authenticateSession()
     stubAjax 'GET', '/api/users', 200, FIXTURES.users()
 
   after ->
+    invalidateSession()
     $.mockjaxClear()
     Dashboard.reset()
 

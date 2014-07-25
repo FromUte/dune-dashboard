@@ -1,4 +1,7 @@
 describe 'Integration: Sessions', ->
+  before ->
+    invalidateSession()
+
   after ->
     $.mockjaxClear()
     Dashboard.reset()
@@ -43,7 +46,7 @@ describe 'Integration: Sessions', ->
 
     context 'When it fails', ->
       it 'shows the error message', ->
-        signOutUser()
+        invalidateSession()
         expect(2)
         stubAjax 'POST', '/api/sessions', 401, {}
 
@@ -61,7 +64,7 @@ describe 'Integration: Sessions', ->
   describe 'sign out', ->
     it 'sets isAuthenticated as false', ->
       expect(1)
-      signInUser()
+      authenticateSession()
 
       stubAjax 'DELETE', '/api/sessions', 200, {}
 
