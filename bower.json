@@ -20,7 +20,7 @@
     "ember-i18n": "~2.0.0",
     "moment": "~2.7.0",
     "numeral": "~1.5.3",
-    "ember-simple-auth": "~0.6.3"
+    "ember-simple-auth": "~0.6.4"
   },
   "devDependencies": {
     "qunit-bdd": "~0.6.1"
