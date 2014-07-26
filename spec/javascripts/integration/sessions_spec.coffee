@@ -1,6 +1,10 @@
 describe 'Integration: Sessions', ->
+  before ->
+    invalidateSession()
+
   after ->
     $.mockjaxClear()
+    Dashboard.reset()
 
   it 'redirects to new session page', ->
     expect(1)
@@ -8,61 +12,63 @@ describe 'Integration: Sessions', ->
     andThen ->
       equal(currentRouteName(), 'sessionsNew')
 
-  it 'header text', ->
+  it 'has page title in the header', ->
     expect(1)
     visit '/sessions/new'
     andThen ->
       equal find('.header').text(), 'Sign In'
 
-  it 'sign in succeeds', ->
-    expect(2)
-    stubAjax 'POST', '/api/sessions', 201,
-      {
-        user_id: 1,
-        access_token: 'some_token'
-      }
+  describe 'sign in', ->
+    context 'When it succeeds', ->
+      it 'redirects to index and shows the user name', ->
+        expect(2)
+        stubAjax 'POST', '/api/sessions', 201,
+          {
+            user_id: 1,
+            access_token: 'some_token'
+          }
 
-    stubAjax 'GET', '/api/users/1', 200,
-      {
-        user: { id: 1, name: 'Foo Bar' }
-      }
+        stubAjax 'GET', '/api/users/1', 200,
+          {
+            user: { id: 1, name: 'Foo Bar' }
+          }
 
-    visit '/sessions/new'
+        visit '/sessions/new'
 
-    andThen ->
-      fillIn('input[type=text]', 'foo@bar.com')
-      fillIn('input[type=password]', 'foo@bar.com')
-      click('input[type=submit]')
+        andThen ->
+          fillIn('input[type=text]', 'foo@bar.com')
+          fillIn('input[type=password]', 'foo@bar.com')
+          click('input[type=submit]')
 
-    andThen ->
-      equal(currentRouteName(), 'index')
-      equal find('.current-user-name').text(), 'Foo Bar'
+        andThen ->
+          equal(currentRouteName(), 'index')
+          equal find('.current-user-name').text(), 'Foo Bar'
 
-  it 'sign in fails', ->
-    signOutUser()
-    expect(2)
-    stubAjax 'POST', '/api/sessions', 401, {}
+    context 'When it fails', ->
+      it 'shows the error message', ->
+        invalidateSession()
+        expect(2)
+        stubAjax 'POST', '/api/sessions', 401, {}
 
-    visit '/sessions/new'
+        visit '/sessions/new'
 
-    andThen ->
-      fillIn('input[type=text]', 'foo@bar.com')
-      fillIn('input[type=password]', 'foo@bar.com')
-      click('input[type=submit]')
+        andThen ->
+          fillIn('input[type=text]', 'foo@bar.com')
+          fillIn('input[type=password]', 'foo@bar.com')
+          click('input[type=submit]')
 
-    andThen ->
-      equal(currentRouteName(), 'sessionsNew')
-      equal find('.notification').text(), 'Invalid email or password.'
+        andThen ->
+          equal(currentRouteName(), 'sessionsNew')
+          equal find('.notification').text(), 'Invalid email or password.'
 
-  it 'sign out', ->
-    expect(1)
-    signInUser()
+  describe 'sign out', ->
+    it 'has a sign out button', ->
+      expect(1)
+      authenticateSession()
 
-    stubAjax 'DELETE', '/api/sessions', 200, {}
+      stubAjax 'DELETE', '/api/sessions', 200, {}
 
-    visit '/'
+      visit '/'
 
-    andThen ->
-      click('header .user-sign-out')
-    andThen ->
-      equal(Dashboard.__container__.lookup('simple-auth-session:main').isAuthenticated, false)
+      andThen ->
+        equal find('header .user-sign-out').length,  1

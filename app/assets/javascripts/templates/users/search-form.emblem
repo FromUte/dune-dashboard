@@ -1,5 +1,5 @@
 .box.box-primary
-  form submit='submitSearch'
+  form.search submit='submitSearch'
     .box-body
       .row
         .col-md-12
