@@ -21,3 +21,15 @@ Dashboard.ApplicationRoute = Ember.Route.extend SimpleAuth.ApplicationRouteMixin
     sessionAuthenticationFailed: (error)->
       Bootstrap.NM.set('content', Ember.A())
       Bootstrap.NM.push(Ember.I18n.t('sessions.new.invalid_password'), 'danger')
+
+    openModal: (modal) ->
+      @render modal,
+        into: 'layouts/application'
+        outlet: 'modal'
+        viewClass: 'modal'
+
+    closeModal: ->
+      @disconnectOutlet
+        outlet: 'modal'
+        parentView: 'layouts/application'
+        viewClass: 'modal'

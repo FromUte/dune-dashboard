@@ -13,5 +13,7 @@ if session.isAuthenticated
 
       section.content
         = outlet
+  = outlet 'modal'
+
 else
   = outlet 'login'
