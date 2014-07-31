@@ -54,7 +54,8 @@
             if project.channel
               .label.label-default = project.channel.name
               | &nbsp; - &nbsp;
-            = project.name
+            a href=project.html_url target='blank'
+              = project.name
             if session.currentUser.admin?
               hr
 
@@ -72,7 +73,9 @@
                 t 'projects.index.table.home_page'
                 view Dashboard.AutoSaveCheckboxView resource=project attr=project.home_page
 
-          td = project.user.name
+          td
+            a href=project.user.html_url target='blank'
+              = project.user.name
           td
             number-to-currency project.goal
           td
