@@ -36,6 +36,7 @@
     thead
       tr
         th
+        th
           t 'contributions.index.table.project'
         th
           t 'contributions.index.table.user'
@@ -50,6 +51,9 @@
     tbody
       each contribution in model
         tr
+          td
+            a{action 'show' contribution} href='#' class='btn btn-primary btn-xs'
+              i.fa.fa-eye
           td
             a href=contribution.project.html_url target='blank'
               = contribution.project.name
@@ -98,7 +102,7 @@
                         t 'contributions.index.actions.push_to_trash'
       else
         tr
-          td.no-results colspan='6'
+          td.no-results colspan='7'
             t 'words.no_results'
 
   if model

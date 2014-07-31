@@ -18,6 +18,11 @@ Dashboard.ContributionsTabRoute = Dashboard.AuthenticatedRoute.extend
     refresh: ->
       @refresh()
 
+    show: (contribution)->
+      controller = @controllerFor('contributions.show')
+      controller.set('model', contribution)
+      @render('contributions/show', outlet: 'modal', controller: controller)
+
 Dashboard.ContributionsSearchRoute = Dashboard.ContributionsTabRoute.extend Dashboard.SearchableRoute,
   baseRouteName: 'contributions'
   resourceName: 'contribution'

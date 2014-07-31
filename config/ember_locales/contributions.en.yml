@@ -26,3 +26,17 @@ en:
         cancel: 'Cancel'
         pendent: 'Set as Pending'
         push_to_trash: 'Destroy'
+    show:
+      contribution_to: "'s contribution to"
+      value: 'Value'
+      payment_method: 'Payment Method'
+      payment_service_fee: 'Payment Fee'
+      payment_service_fee_paid_by_user: 'Payment Fee Paid by User?'
+      payment_id: 'Payment ID'
+      key: 'Contribution Key'
+      user_email: 'User Email'
+      created_at: 'Created at'
+      confirmed_at: 'Confirmed at'
+      reward:
+        title: 'Reward Title'
+        minimum_value: 'Reward Value'

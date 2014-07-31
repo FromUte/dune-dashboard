@@ -5,7 +5,7 @@ FIXTURES.contribution = (id = 1)->
     id: id
     #project_id: 1
     user_id: 1
-    reward_id: 226
+    #reward_id: 226
     value: "25.0"
     confirmed_at: null
     created_at: "2014-01-14T16:32:36.324-06:00"
