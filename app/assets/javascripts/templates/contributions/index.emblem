@@ -50,7 +50,9 @@
     tbody
       each contribution in model
         tr
-          td = contribution.project_id
+          td
+            a href=contribution.project.html_url target='blank'
+              = contribution.project.name
           td
             .avatar.small class=contribution.user.profile_type
               a href=contribution.user.html_url target='blank'
