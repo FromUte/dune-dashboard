@@ -40,6 +40,10 @@ Ember.Application.initializer
     SimpleAuth.Session.reopen
       currentUser: (->
         userId = @get('user_id')
+
+        if Ember.isEmpty(userId) && Ember.testing
+          userId = 1
+
         if !Ember.isEmpty(userId)
           Ember.run ->
             Dashboard.__container__.lookup('store:main').find('user', userId)
