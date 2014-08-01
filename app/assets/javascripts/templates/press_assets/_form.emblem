@@ -1,0 +1,33 @@
+form submit='save' enctype='multipart/form-data'
+  .form-group class=errors.title:has-error
+    label
+      t 'press_assets.form.title'
+      = input type='text' value=title class='form-control'
+
+    each errors.title
+      span.error
+        = message
+
+  .form-group class=errors.url:has-error
+    label
+      t 'press_assets.form.url'
+      = input type='url' value=url class='form-control'
+
+    each errors.url
+      span.error
+        = message
+
+  .form-group class=errors.image:has-error
+    label
+      t 'press_assets.form.image'
+      view Dashboard.FileView fileBinding="image" class='form-control'
+
+    each errors.image
+      span.error
+        = message
+
+  .form-actions
+    = input type='submit' valueTranslation='words.save' class='btn btn-primary'
+    |&nbsp;
+    button.btn{action "cancel"}
+      t 'words.cancel'
