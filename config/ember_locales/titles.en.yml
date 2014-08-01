@@ -8,6 +8,10 @@ en:
       new: 'New Tag'
       index: 'Tags'
       edit: 'Edit Tag'
+    press_assets:
+      new: 'New Press Asset'
+      index: 'Press Assets'
+      edit: 'Edit Press Asset'
     users:
       index: 'Users'
     contributions:
