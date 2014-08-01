@@ -14,7 +14,7 @@ FIXTURES.user = (id = 1)->
     name: "Foo Bar"
     image_url: "http://neighbor.ly/uploads/user/uploaded_image/18/thumb_avatar_image.jpg"
     total_contributed: "70.0"
-    admin: false
+    admin: true
     url: "http://neighbor.ly/api/contributions/18"
     html_url: "http://neighbor.ly/neighbors/18-mrs-abigayle-gaylord"
 
