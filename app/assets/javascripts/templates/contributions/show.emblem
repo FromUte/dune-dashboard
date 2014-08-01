@@ -1,0 +1,79 @@
+.modal-dialog
+  .modal-content
+    .modal-header
+      button.close{action 'cancel'} type='button' 
+        span aria-hidden='true'  &times;
+        span.sr-only = t 'words.close'
+      h4.modal-title
+        .avatar.small class=user.profile_type
+          a href=user.html_url target='blank'
+            img src=user.image_url class='img-circle'
+        | &nbsp;
+        a href=user.html_url target='blank'
+          = user.name
+        t 'contributions.show.contribution_to'
+        | &nbsp;
+        a href=project.html_url target='blank'
+          = project.name
+    .modal-body
+
+      dl.details
+        dt
+          t 'contributions.show.value'
+        dd
+          number-to-currency value
+
+        dt
+          t 'contributions.show.payment_method'
+        dd
+          = payment_method
+          
+        dt
+          t 'contributions.show.payment_service_fee'
+        dd
+          number-to-currency payment_service_fee
+
+        dt
+          t 'contributions.show.payment_service_fee_paid_by_user'
+        dd
+          show-boolean payment_service_fee_paid_by_user
+
+        dt
+          t 'contributions.show.payment_id'
+        dd
+          span
+            = payment_id
+
+        dt
+          t 'contributions.show.key'
+        dd
+          span
+            = key
+
+        dt
+          t 'contributions.show.reward.title'
+        dd
+          = reward.title
+
+        dt
+          t 'contributions.show.reward.minimum_value'
+        dd
+          number-to-currency reward.minimum_value
+
+        dt
+          t 'contributions.show.user_email'
+        dd
+          = user.email
+
+        dt
+          t 'contributions.show.created_at'
+        dd 
+          format-date created_at
+
+        dt
+          t 'contributions.show.confirmed_at'
+        dd 
+          format-date confirmed_at
+          
+    .modal-footer
+      button.btn.btn-primary{action 'cancel'} type='button' = t 'words.okay'

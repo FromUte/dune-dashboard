@@ -23,3 +23,4 @@ Dashboard.ContributionsTabController = Ember.ArrayController.extend Dashboard.Se
 Dashboard.ContributionsSearchController = Dashboard.ContributionsTabController.extend Dashboard.SearchableController,
   baseRouteName: 'contributions'
 
+Dashboard.ContributionsShowController = Ember.ObjectController.extend Dashboard.ModalControllerMixin

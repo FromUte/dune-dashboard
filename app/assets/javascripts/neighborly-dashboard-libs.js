@@ -15,6 +15,7 @@
 
 //= require sidebar-tree
 //= require bootstrap/dropdown
+//= require bootstrap/modal
 //= require bs-core
 //= require bs-notifications
 //= require bs-breadcrumbs
