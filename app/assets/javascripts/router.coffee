@@ -17,6 +17,10 @@ Dashboard.Router.map ->
     @route 'new'
     @route 'edit', path: '/:id/edit'
 
+  @resource 'press_assets', ->
+    @route 'new'
+    @route 'edit', path: '/:id/edit'
+
   @resource 'users', ->
     @route 'tab', path: '/'
     @route 'search', path: '/search/*query'
