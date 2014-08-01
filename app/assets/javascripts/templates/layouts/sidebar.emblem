@@ -25,7 +25,7 @@ section.sidebar
         i.fa.fa-tags
         span = t 'layouts.sidebar.tags'
     li
-      link-to 'index'
+      link-to 'press_assets'
         i.fa.fa-file-text
         span = t 'layouts.sidebar.press_assets'
     li
