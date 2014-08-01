@@ -19,7 +19,7 @@ header.header
               i.caret
           ul.dropdown-menu
             li
-              a href="#" = t 'layouts.header.profile'
+              a href=session.currentUser.html_url target='blank' = t 'layouts.header.profile'
             li
               a click='invalidateSession' href="#" class='user-sign-out'
                 t 'layouts.header.sign_out'

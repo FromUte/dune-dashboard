@@ -28,10 +28,7 @@ describe 'Integration: Sessions', ->
             access_token: 'some_token'
           }
 
-        stubAjax 'GET', '/api/users/1', 200,
-          {
-            user: { id: 1, name: 'Foo Bar' }
-          }
+        stubAjax 'GET', '/api/users/1', 200, FIXTURES.user(1)
 
         visit '/sessions/new'
 
