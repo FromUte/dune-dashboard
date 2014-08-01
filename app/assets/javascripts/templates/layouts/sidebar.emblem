@@ -28,12 +28,8 @@ section.sidebar
       link-to 'press_assets'
         i.fa.fa-file-text
         span = t 'layouts.sidebar.press_assets'
-    li
-      link-to 'index'
-        i.fa.fa-list
-        span = t 'layouts.sidebar.contacts'
     li.treeview
-      link-to 'index'
+      a href='#'
         i.fa.fa-table
         span = t 'layouts.sidebar.reports'
         i.fa.fa-angle-left.pull-right
