@@ -8,33 +8,35 @@ section.sidebar
       link-to 'projects' 
         i.fa.fa-th-large
         span = t 'layouts.sidebar.projects'
-    li
-      link-to 'contributions'
-        i.fa.fa-credit-card
-        span = t 'layouts.sidebar.contributions'
-    li
-      link-to 'users'
-        i.fa.fa-users
-        span = t 'layouts.sidebar.users'
-    li
-      link-to 'index'
-        i.fa.fa-bookmark
-        span = t 'layouts.sidebar.channels'
-    li
-      link-to 'tags'
-        i.fa.fa-tags
-        span = t 'layouts.sidebar.tags'
-    li
-      link-to 'press_assets'
-        i.fa.fa-file-text
-        span = t 'layouts.sidebar.press_assets'
-    li.treeview
-      a href='#'
-        i.fa.fa-table
-        span = t 'layouts.sidebar.reports'
-        i.fa.fa-angle-left.pull-right
-      ul.treeview-menu
-        li
-          link-to 'index'
-            i.fa.fa-money
-            = t 'layouts.sidebar.financial'
+
+    if session.currentUser.admin?
+      li
+        link-to 'contributions'
+          i.fa.fa-credit-card
+          span = t 'layouts.sidebar.contributions'
+      li
+        link-to 'users'
+          i.fa.fa-users
+          span = t 'layouts.sidebar.users'
+      li
+        link-to 'index'
+          i.fa.fa-bookmark
+          span = t 'layouts.sidebar.channels'
+      li
+        link-to 'tags'
+          i.fa.fa-tags
+          span = t 'layouts.sidebar.tags'
+      li
+        link-to 'press_assets'
+          i.fa.fa-file-text
+          span = t 'layouts.sidebar.press_assets'
+      li.treeview
+        a href='#'
+          i.fa.fa-table
+          span = t 'layouts.sidebar.reports'
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li
+            link-to 'index'
+              i.fa.fa-money
+              = t 'layouts.sidebar.financial'
