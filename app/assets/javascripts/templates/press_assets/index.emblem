@@ -1,0 +1,45 @@
+.page-controls
+  link-to 'press_assets.new' class='btn btn-primary'
+    t 'press_assets.index.new'
+
+.nav-tabs-custom
+  ul.nav.nav-tabs
+    = link-to 'press_assets' tagName='li'
+      a href="#"
+        t 'press_assets.index.tabs.all'
+
+  table.table.table-hover
+    thead
+      tr
+        th
+          t 'press_assets.index.table.title'
+        th
+          t 'press_assets.index.table.url'
+        th
+          t 'press_assets.index.table.image'
+        th
+
+    tbody
+      each model
+        tr
+          td = title
+          td
+            a href=url target="blank"
+              = url
+          td
+            img src=image_url width="100"
+          td
+            .text-right
+              = link-to 'press_assets.edit' id
+                i.fa.fa-edit
+              | &nbsp;
+              a{action 'destroy' this} href='#'
+                i.fa.fa-trash-o
+      else
+        tr
+          td.no-results colspan='4'
+            t 'words.no_results'
+
+  if model
+    .pagination-wrapper-button
+      pagination
