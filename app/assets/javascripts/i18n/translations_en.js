@@ -117,5 +117,7 @@ Ember.I18n.translations = {
   "words._yes": "Yes",
   "words._no": "No",
   "words.search": "Submit Search",
-  "words.search_results": "Search Results"
+  "words.search_results": "Search Results",
+  "words.close": "Close",
+  "words.okay": "Okay"
 };
