@@ -47,12 +47,6 @@ To run the specs just run:
 $ bundle exec spec
 ```
 
-or you can start a server to run the specs:
-
-```
-$ bundle exec spec:serve
-```
-
 ### I18n
 
 We use [ember-i18n](https://github.com/jamesarosen/ember-i18n) for internationalization in the Ember application, but we write the translations in a [YAML](http://en.wikipedia.org/wiki/YAML) file. To export the translations from YAML to Javascript we have a rake task to do that.
