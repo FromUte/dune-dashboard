@@ -6,6 +6,7 @@ Dashboard.User = DS.Model.extend
   total_contributed: DS.attr('string')
   profile_type: DS.attr('string')
   html_url: DS.attr('string')
+  created_at: DS.attr('date')
 
   edit_html_url: (->
     "#{@get('html_url')}/edit"
