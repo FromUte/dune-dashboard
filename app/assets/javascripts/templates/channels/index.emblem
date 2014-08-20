@@ -1,0 +1,62 @@
+= partial 'channels/search-form'
+
+.nav-tabs-custom
+  ul.nav.nav-tabs
+    = link-to 'channels.tab' tagName='li'
+      a href="#"
+        t 'channels.index.tabs.all'
+
+    view 'Dashboard.SearchTab' routeName='channels.search'
+
+  table.table.table-hover
+    thead
+      tr
+        th
+          t 'channels.index.table.name'
+        th
+          t 'channels.index.table.permalink'
+        th
+          t 'channels.index.table.created_at'
+        th
+          t 'channels.index.table.state'
+        th
+    tbody
+      each channel in model
+        tr
+          td
+            a href=channel.html_url target='blank'
+              = channel.name
+          td
+            = channel.permalink
+          td
+            format-date channel.created_at
+          td
+            .dropdown
+              a.btn.btn-xs.dropdown-toggle data-toggle='dropdown' class=channel.state
+                = channel.state
+                span.caret
+              ul.dropdown-menu.dropdown-menu-right
+                if channel.visible
+                  li
+                    a{action 'changeState' channel 'push_to_draft'} href='#' tabindex='-1'
+                      t 'channels.index.actions.push_to_draft'
+                else
+                  li
+                    a{action 'changeState' channel 'push_to_online'} href='#' tabindex='-1'
+                      t 'channels.index.actions.push_to_online'
+
+          td
+            .text-right
+              = link-to 'tags.edit' id
+                i.fa.fa-edit
+              | &nbsp;
+              a{action 'destroy' channel} href='#'
+                i.fa.fa-trash-o
+      else
+        tr
+          td.no-results colspan='5'
+            t 'words.no_results'
+
+  if model
+    .pagination-wrapper-button
+      pagination

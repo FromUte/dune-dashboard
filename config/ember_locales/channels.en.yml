@@ -1,0 +1,15 @@
+en:
+  channels:
+    index:
+      tabs:
+        all: 'All Channels'
+      search:
+        query: 'Search'
+      table:
+        name: 'Name'
+        permalink: 'Permalink'
+        created_at: 'Created at'
+        state: 'State'
+      actions:
+        push_to_draft: 'Send to Draft'
+        push_to_online: 'Send to Online'
