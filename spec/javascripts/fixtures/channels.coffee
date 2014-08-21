@@ -26,7 +26,6 @@ FIXTURES.channel = (id = 1)->
     how_it_works_html: null
     terms_url: "http://test.host/terms"
     state: "draft"
-    user_id: 3432
     accepts_projects: true
     submit_your_project_text: null
     submit_your_project_text_html: null
