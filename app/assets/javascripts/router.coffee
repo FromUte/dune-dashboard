@@ -28,6 +28,8 @@ Dashboard.Router.map ->
   @resource 'channels', ->
     @route 'tab', path: '/'
     @route 'search', path: '/search/*query'
+    @route 'new'
+    @route 'edit', path: '/:id/edit'
 
   @route 'sessionsNew', path: 'sessions/new'
   @route 'sessionsDestroy', path: 'sessions/destroy'

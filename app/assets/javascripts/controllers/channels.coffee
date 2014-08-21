@@ -20,3 +20,21 @@ Dashboard.ChannelsTabController = Ember.ArrayController.extend Dashboard.Searcha
 
 Dashboard.ChannelsSearchController = Dashboard.ChannelsTabController.extend Dashboard.SearchableController,
   baseRouteName: 'channels'
+
+Dashboard.ChannelsEditController = Ember.ObjectController.extend
+  actions:
+    save: ->
+      channel = @get('model')
+
+      channel.save()
+        .then =>
+          @transitionToRoute 'channels'
+        .catch (errors)->
+          console.log errors
+          # must supply catch promise, otherwise Ember will throw a
+          # 'backend rejected the commit' error.
+
+    cancel: ->
+      @transitionToRoute('channels')
+
+Dashboard.ChannelsNewController = Dashboard.ChannelsEditController.extend()
