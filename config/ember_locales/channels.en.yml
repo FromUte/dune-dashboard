@@ -1,6 +1,7 @@
 en:
   channels:
     index:
+      new: 'Add New Channel'
       tabs:
         all: 'All Channels'
       search:
@@ -13,3 +14,36 @@ en:
       actions:
         push_to_draft: 'Send to Draft'
         push_to_online: 'Send to Online'
+    form:
+      associate_existing_user: 'Associate an existing user'
+      create_new_channel_user: 'Create a new user'
+      start_content_fieldset: 'Content for Start Page'
+      success_content_fieldset: 'Content for Successfully Submitted Page'
+      permalink: 'Permalink'
+      name: 'Name'
+      accepts_projects: 'Accepts Projects'
+      description: 'Description'
+      image: 'Image'
+      email: 'Email'
+      video_url: 'Video Url'
+      how_it_works: 'About Us'
+      submit_your_project_text: 'Submit Your Project'
+      start_hero_image: 'Header Image'
+      start_content:
+        start_primary_content: 'Primary Content'
+        start_secondary_content: 'Secondary Content'
+        title: 'Title'
+        subtitle: 'Subtitle'
+        first_step_icon: 'First Step Icon'
+        first_step_title: 'First Step Title'
+        first_step_description: 'First Step Description'
+        second_step_icon: 'Second Step Icon'
+        second_step_title: 'Second Step Title'
+        second_step_description: 'Second Description'
+        third_step_icon: 'Third Step Icon'
+        third_step_title: 'Third Step Title'
+        third_step_description: 'Third Step Description'
+      success_content:
+        main_text: 'Main Text'
+        button_text: 'Button Text'
+        button_link: 'Button Link'
