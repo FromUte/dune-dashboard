@@ -1,6 +1,7 @@
 //= require ./dashboard
 //= require ./store
 //= require ./configs
+//= require ./adapters/form_data
 //= require_tree ./adapters
 //= require_tree ./initializers
 //= require_tree ./serializers
