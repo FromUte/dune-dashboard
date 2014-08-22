@@ -18,3 +18,5 @@ en:
       index: 'Contributions'
     channels:
       index: 'Channels'
+      new: 'Add New Channel'
+      edit: 'Edit Channel'

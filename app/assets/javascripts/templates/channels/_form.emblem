@@ -1,0 +1,256 @@
+form submit='save' enctype='multipart/form-data'
+
+  unless user.id
+    .row
+      .col-xs-6
+        h4 = t 'channels.form.associate_existing_user'
+        .form-group class=errors.user_id:has-error
+          label
+            t 'channels.form.user_id'
+
+          = input type='number' value=user_id class='form-control'
+          each errors.user_id
+            span.error
+              = message
+
+      .col-xs-6
+        h4 = t 'channels.form.create_new_channel_user'
+        .row
+          .col-xs-6
+            .form-group class=errors.userEmail:has-error
+              label
+                t 'channels.form.email'
+
+              = input type='text' value=user.email class='form-control'
+              each errors.userEmail
+                span.error
+                  = message
+
+          .col-xs-6
+            .form-group class=errors.userPassword:has-error
+              label
+                t 'channels.form.user.password'
+
+              = input type='password' value=user.password class='form-control'
+              each errors.userPassword
+                span.error
+                  = message
+  .row
+    .col-xs-3
+      .form-group class=errors.permalink:has-error
+        label
+          t 'channels.form.permalink'
+
+        = input type='text' value=permalink class='form-control'
+        each errors.permalink
+          span.error
+            = message
+
+    .col-xs-7
+      .form-group class=errors.name:has-error
+        label
+          t 'channels.form.name'
+
+        = input type='text' value=name class='form-control'
+        each errors.name
+          span.error
+            = message
+
+    .col-xs-2
+      .form-group class=errors.accepts_projects:has-error
+        label
+          t 'channels.form.accepts_projects'
+          = input type='checkbox' checked=accepts_projects class='form-control'
+
+  .row
+    .col-xs-9
+      .form-group class=errors.description:has-error
+        label
+          t 'channels.form.description'
+
+        = textarea value=description class='form-control'
+        each errors.description
+          span.error
+            = message
+
+    .col-xs-3
+      .form-group
+        label = t 'channels.form.image'
+        view Dashboard.FileView fileBinding="image" class='form-control'
+
+      img.col-xs-12 src=image.image.large.url
+
+  if user.id
+    .form-group class=errors.userEmail:has-error
+      label
+        t 'channels.form.email'
+
+      = input type='text' value=user.email class='form-control'
+      each errors.userEmail
+        span.error
+          = message
+
+  .form-group class=errors.video_url:has-error
+    label
+      t 'channels.form.video_url'
+
+    = input type='text' value=video_url class='form-control'
+    each errors.video_url
+      span.error
+        = message
+  .row
+    .col-xs-4
+      .form-group
+        .input-group
+          .input-group-addon
+            i.fa.fa-facebook
+          = input type='text' value=user.facebook_url placeholder='http://facebook.com/' class='form-control'
+
+    .col-xs-4
+      .form-group
+        .input-group
+          .input-group-addon
+            i.fa.fa-twitter
+          = input type='text' value=user.twitter_url placeholder='http://twitter.com/' class='form-control'
+
+    .col-xs-4
+      .form-group
+        .input-group
+          .input-group-addon
+            i.fa.fa-globe
+          = input type='text' value=user.other_url placeholder='http://www.' class='form-control'
+
+  .form-group class=errors.submit_your_project_text:has-error
+    label
+      t 'channels.form.submit_your_project_text'
+
+    = textarea value=submit_your_project_text class='form-control'
+    each errors.submit_your_project_text
+      span.error
+        = message
+
+  .form-group class=errors.how_it_works:has-error
+    label
+      t 'channels.form.how_it_works'
+
+    = textarea value=how_it_works class='form-control'
+    each errors.how_it_works
+      span.error
+        = message
+
+  fieldset
+    h3 = t 'channels.form.start_content_fieldset'
+
+    .row
+      .col-xs-8
+        .form-group
+          label
+            t 'channels.form.start_content.title'
+          = input type='text' value=start_content.title class='form-control'
+
+        .form-group
+          label
+            t 'channels.form.start_content.subtitle'
+          = input type='text' value=start_content.subtitle class='form-control'
+
+      .col-xs-4
+        .form-group
+          label = t 'channels.form.start_hero_image'
+          view Dashboard.FileView fileBinding="start_hero_image" class='form-control'
+
+        p
+          img width="200" src=start_hero_image.start_hero_image.blur.url
+
+    .row
+      .col-xs-4
+        .form-group
+          label
+            t 'channels.form.start_content.first_step_icon'
+          = input type='text' value=start_content.first_step_icon class='form-control'
+
+      .col-xs-4
+        .form-group
+          label
+            t 'channels.form.start_content.first_step_title'
+          = input type='text' value=start_content.first_step_title class='form-control'
+
+      .col-xs-4
+        .form-group
+          label
+            t 'channels.form.start_content.first_step_description'
+          = input type='text' value=start_content.first_step_description class='form-control'
+
+    .row
+      .col-xs-4
+        .form-group
+          label
+            t 'channels.form.start_content.second_step_icon'
+          = input type='text' value=start_content.second_step_icon class='form-control'
+
+      .col-xs-4
+        .form-group
+          label
+            t 'channels.form.start_content.second_step_title'
+          = input type='text' value=start_content.second_step_title class='form-control'
+
+      .col-xs-4
+        .form-group
+          label
+            t 'channels.form.start_content.second_step_description'
+          = input type='text' value=start_content.second_step_description class='form-control'
+
+    .row
+      .col-xs-4
+        .form-group
+          label
+            t 'channels.form.start_content.second_step_icon'
+          = input type='text' value=start_content.second_step_icon class='form-control'
+
+      .col-xs-4
+        .form-group
+          label
+            t 'channels.form.start_content.third_step_title'
+          = input type='text' value=start_content.third_step_title class='form-control'
+
+      .col-xs-4
+        .form-group
+          label
+            t 'channels.form.start_content.third_step_description'
+          = input type='text' value=start_content.third_step_description class='form-control'
+
+    .form-group
+      label
+        t 'channels.form.start_content.start_primary_content'
+      = textarea type='text' value=start_content.start_primary_content class='form-control'
+
+    .form-group
+      label
+        t 'channels.form.start_content.start_secondary_content'
+      = textarea type='text' value=start_content.start_secondary_content class='form-control'
+
+
+  fieldset
+    h3 = t 'channels.form.success_content_fieldset' 
+    
+    .form-group
+      label
+        t 'channels.form.success_content.main_text'
+      = textarea type='text' value=success_content.main_text class='form-control'
+
+    .form-group
+      label
+        t 'channels.form.success_content.button_text'
+      = textarea type='text' value=success_content.button_text class='form-control'
+
+    .form-group
+      label
+        t 'channels.form.success_content.button_link'
+      = textarea type='text' value=success_content.button_link class='form-control'
+
+
+  .form-actions
+    = input type='submit' valueTranslation='words.save' class='btn btn-primary'
+    |&nbsp;
+    button.btn{action "cancel"}
+      t 'words.cancel'
+
