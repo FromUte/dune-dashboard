@@ -16,3 +16,5 @@ en:
       index: 'Users'
     contributions:
       index: 'Contributions'
+    channels:
+      index: 'Channels'

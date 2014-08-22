@@ -19,7 +19,7 @@ section.sidebar
           i.fa.fa-users
           span = t 'layouts.sidebar.users'
       li
-        link-to 'index'
+        link-to 'channels'
           i.fa.fa-bookmark
           span = t 'layouts.sidebar.channels'
       li
