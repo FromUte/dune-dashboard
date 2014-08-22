@@ -10,7 +10,7 @@ Dashboard.ProjectsTabRoute = Dashboard.AuthenticatedRoute.extend
     @render('projects/index')
 
   model: (params)->
-    filter = {}
+    filter = { manageable: true }
     filter[params['filter']] = true
     @store.findQuery('project', filter)
 
