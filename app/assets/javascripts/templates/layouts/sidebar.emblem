@@ -30,13 +30,3 @@ section.sidebar
         link-to 'press_assets'
           i.fa.fa-file-text
           span = t 'layouts.sidebar.press_assets'
-      li.treeview
-        a href='#'
-          i.fa.fa-table
-          span = t 'layouts.sidebar.reports'
-          i.fa.fa-angle-left.pull-right
-        ul.treeview-menu
-          li
-            link-to 'index'
-              i.fa.fa-money
-              = t 'layouts.sidebar.financial'
