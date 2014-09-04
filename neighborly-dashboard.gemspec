@@ -19,10 +19,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'rails', '~> 4.0'
-  spec.add_dependency 'sass-rails'
-  spec.add_dependency 'coffee-rails'
-  spec.add_dependency 'bootstrap-sass'
-  spec.add_dependency 'font-awesome-sass'
-  spec.add_dependency 'ember-rails', '~> 0.15.0'
-  spec.add_dependency 'emblem-rails', '~> 0.2.1'
+  spec.add_dependency 'sass-rails', '>= 0'
+  spec.add_dependency 'coffee-rails', '>= 0'
+  spec.add_dependency 'bootstrap-sass', '>= 0'
+  spec.add_dependency 'font-awesome-sass', '~> 4.2'
+  spec.add_dependency 'ember-rails', '~> 0.15'
+  spec.add_dependency 'emblem-rails', '~> 0.2'
 end
