@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.1
+
+* Fix font awesome icons
+
 ## 1.0.0
 
 * Sign In
