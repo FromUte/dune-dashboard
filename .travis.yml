@@ -8,3 +8,6 @@ before_script:
 
 script:
   - 'bundle exec rake spec'
+
+notifications:
+  webhooks: http://neighborly-ci.herokuapp.com/projects/0530b00f-c82f-4095-a474-000e48ff7355/status
