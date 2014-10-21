@@ -3,6 +3,7 @@ Dashboard.ProjectsTabController = Ember.ArrayController.extend Dashboard.Searcha
 
   defaultSearchFields:
     query: null
+    manageable: true
     between_created_at:
       starts_at: null
       ends_at: null
