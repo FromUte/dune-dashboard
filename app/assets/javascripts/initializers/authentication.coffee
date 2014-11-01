@@ -28,7 +28,7 @@ Dashboard.CustomAuthorizer = SimpleAuth.Authorizers.Base.extend
   authorize: (jqXHR, requestOptions) ->
     accessToken = @get('session.access_token')
     if @get('session.isAuthenticated') and not Ember.isEmpty(accessToken)
-      jqXHR.setRequestHeader 'Authorization', 'Token ' + accessToken
+      jqXHR.setRequestHeader 'Authorization', 'Token token=' + accessToken
 
 Ember.Application.initializer
   name: 'authentication'
