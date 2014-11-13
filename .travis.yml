@@ -10,4 +10,4 @@ script:
   - 'bundle exec rake spec'
 
 notifications:
-  webhooks: http://neighborly-ci.herokuapp.com/projects/0530b00f-c82f-4095-a474-000e48ff7355/status
+  webhooks: https://ci.neighbor.ly/projects/bca4e45b-f539-42a6-a242-077a6f79b90b/status
