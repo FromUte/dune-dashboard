@@ -10,8 +10,8 @@ bs-notifications
       .form-group
         = input type='password' value=password placeholderTranslation='sessions.new.password' class='form-control'
         .text-right
-          a href='https://neighbor.ly/password/new' = t 'sessions.new.forget_password'
+          a href='https://www.dune-investissement.fr/password/new' = t 'sessions.new.forget_password'
 
     .footer
       = input type='submit' valueTranslation='sessions.new.submit' class='btn bg-olive btn-block'
-      a.text-center href='https://neighbor.ly/sign_up' = t 'sessions.new.sign-up'
+      a.text-center href='https://www.dune-investissement.fr/sign_up' = t 'sessions.new.sign-up'

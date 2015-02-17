@@ -13,11 +13,11 @@ desc 'Run the javascript specs'
 task :teaspoon => 'app:teaspoon'
 task :spec => 'app:teaspoon'
 
-require 'neighborly/dashboard/i18n'
+require 'dune/dashboard/i18n'
 
 namespace :i18n do
   desc 'Export the messages files'
   task :export do
-    Neighborly::Dashboard::I18n.export!
+    Dune::Dashboard::I18n.export!
   end
 end

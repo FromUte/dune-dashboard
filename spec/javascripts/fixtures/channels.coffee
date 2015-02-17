@@ -37,8 +37,8 @@ FIXTURES.channel = (id = 1)->
           url: null
 
     success_content: null,
-    url: "http:/neighbor.ly/api/channels/1"
-    html_url: "http://3-test-page.neighbor.ly/"
+    url: "http:/www.dune-investissement.fr/api/channels/1"
+    html_url: "http://3-test-page.dune-investissement.fr/"
 
 FIXTURES.channels = (page = 3)->
   channels: [FIXTURES.channel(1).channel, FIXTURES.channel(2).channel]

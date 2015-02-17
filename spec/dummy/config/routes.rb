@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Neighborly::Dashboard::Engine => '/dashboard/', as: :neighborly_dashboard
+  mount Dune::Dashboard::Engine => '/dashboard/', as: :dune_dashboard
 end

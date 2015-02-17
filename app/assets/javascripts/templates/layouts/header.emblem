@@ -1,6 +1,6 @@
 header.header
   h1.name
-    link-to 'index' | Neighbor.ly
+    link-to 'index' | www.dune-investissement.fr
 
   nav.navbar.navbar-static-top role="navigation" 
     a.navbar-btn.sidebar-toggle data-toggle="offcanvas" href="#" role="button" 

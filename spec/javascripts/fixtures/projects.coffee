@@ -34,7 +34,7 @@ FIXTURES.project = (id = 1)->
     permalink: "beacons"
     pledged: "0.0"
     recommended: false
-    short_url: "http://neighbor.ly/beacons"
+    short_url: "http://www.dune-investissement/beacons"
     site: ""
     state: "draft"
     street_address: null
@@ -42,34 +42,34 @@ FIXTURES.project = (id = 1)->
     terms_html: ""
     uploaded_image:
       uploaded_image:
-        url: "/uploads/neighborly/api/project/uploaded_image/27/Beacons.jpg"
+        url: "/uploads/dune/api/project/uploaded_image/27/Beacons.jpg"
         project_thumb:
-          url: "/uploads/neighborly/api/project/uploaded_image/27/project_thumb_Beacons.jpg"
+          url: "/uploads/dune/api/project/uploaded_image/27/project_thumb_Beacons.jpg"
 
         project_thumb_small:
-          url: "/uploads/neighborly/api/project/uploaded_image/27/project_thumb_small_Beacons.jpg"
+          url: "/uploads/dune/api/project/uploaded_image/27/project_thumb_small_Beacons.jpg"
 
         project_thumb_large:
-          url: "/uploads/neighborly/api/project/uploaded_image/27/project_thumb_large_Beacons.jpg"
+          url: "/uploads/dune/api/project/uploaded_image/27/project_thumb_large_Beacons.jpg"
 
         project_thumb_facebook:
-          url: "/uploads/neighborly/api/project/uploaded_image/27/project_thumb_facebook_Beacons.jpg"
+          url: "/uploads/dune/api/project/uploaded_image/27/project_thumb_facebook_Beacons.jpg"
 
     video_embed_url: "http://player.vimeo.com/video/30922066"
     video_thumbnail:
       video_thumbnail:
-        url: "/uploads/neighborly/api/project/video_thumbnail/27/open-uri20130911-76045-186aa7p"
+        url: "/uploads/dune/api/project/video_thumbnail/27/open-uri20130911-76045-186aa7p"
         project_thumb:
-          url: "/uploads/neighborly/api/project/video_thumbnail/27/project_thumb_open-uri20130911-76045-186aa7p"
+          url: "/uploads/dune/api/project/video_thumbnail/27/project_thumb_open-uri20130911-76045-186aa7p"
 
         project_thumb_small:
-          url: "/uploads/neighborly/api/project/video_thumbnail/27/project_thumb_small_open-uri20130911-76045-186aa7p"
+          url: "/uploads/dune/api/project/video_thumbnail/27/project_thumb_small_open-uri20130911-76045-186aa7p"
 
         project_thumb_large:
-          url: "/uploads/neighborly/api/project/video_thumbnail/27/project_thumb_large_open-uri20130911-76045-186aa7p"
+          url: "/uploads/dune/api/project/video_thumbnail/27/project_thumb_large_open-uri20130911-76045-186aa7p"
 
         project_thumb_facebook:
-          url: "/uploads/neighborly/api/project/video_thumbnail/27/project_thumb_facebook_open-uri20130911-76045-186aa7p"
+          url: "/uploads/dune/api/project/video_thumbnail/27/project_thumb_facebook_open-uri20130911-76045-186aa7p"
 
     video_url: "http://vimeo.com/30922066"
     channel_id: null
@@ -86,7 +86,7 @@ FIXTURES.project = (id = 1)->
       id: 335
       bio: "Husband. Kansas Citian. Fan of cities."
       created_at: "2013-09-11T03:00:39+00:00"
-      email: "sean@neighbor.ly"
+      email: "admin@dune-investissement.com"
       facebook_url: ""
       linkedin_url: "http://www.linkedin.com/pub/sean-connolly/29/7b3/3b7"
       other_url: ""

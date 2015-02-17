@@ -1,11 +1,11 @@
 {
-  "name": "neighborly-dashboard",
+  "name": "dune-dashboard",
   "version": "0.0.0",
-  "homepage": "https://github.com/neighborly/neighborly-dashboard",
+  "homepage": "https://github.com/FromUte/dune-dashboard",
   "authors": [
-    "Josemar Luedke <josemarluedke@gmail.com>"
+    "Legrand Pierre <legrand.work@gmail.com>"
   ],
-  "description": "Neighbor.ly Dashboard",
+  "description": "dune-investissement Dashboard",
   "license": "MIT",
   "private": true,
   "ignore": [

@@ -132,7 +132,7 @@ Ember.I18n.translations = {
   "tags.index.name": "Name",
   "tags.index.visible": "Visible",
   "tags.index.total_projects": "Total Projects",
-  "titles.application": "Neighbor.ly",
+  "titles.application": "dune-investissement",
   "titles.index": "Dashboard",
   "titles.projects.index": "Projects",
   "titles.tags.new": "New Tag",

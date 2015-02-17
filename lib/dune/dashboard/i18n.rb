@@ -2,20 +2,20 @@
 
 require 'FileUtils' unless defined?(FileUtils)
 
-module Neighborly::Dashboard
+module Dune::Dashboard
   module I18n
     extend self
 
     def config_file
-      Neighborly::Dashboard::Engine.root.join('config/ember-i18n.yml')
+      Dune::Dashboard::Engine.root.join('config/ember-i18n.yml')
     end
 
     def export_dir
-      Neighborly::Dashboard::Engine.root.join('app/assets/javascripts/i18n')
+      Dune::Dashboard::Engine.root.join('app/assets/javascripts/i18n')
     end
 
     def vendor_dir
-      Neighborly::Dashboard::Engine.root.join('vendor/assets/javascripts/')
+      Dune::Dashboard::Engine.root.join('vendor/assets/javascripts/')
     end
 
     # Export translations to JavaScript, considering settings
@@ -102,7 +102,7 @@ module Neighborly::Dashboard
     end
 
     def default_locales_path
-      Dir[Neighborly::Dashboard::Engine.root.join('config', 'ember_locales', '*.yml').to_s]
+      Dir[Dune::Dashboard::Engine.root.join('config', 'ember_locales', '*.yml').to_s]
     end
   end
 end

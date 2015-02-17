@@ -5,7 +5,7 @@ unless defined?(Rails)
 end
 
 Teaspoon.configure do |config|
-  config.root = Neighborly::Dashboard::Engine.root
+  config.root = Dune::Dashboard::Engine.root
 
   # Determines where the Teaspoon routes will be mounted. Changing this to "/jasmine" would allow you to browse to
   # `http://localhost:3000/jasmine` to run your tests.

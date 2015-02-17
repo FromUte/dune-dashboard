@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'neighborly/dashboard/version'
+require 'dune/dashboard/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'neighborly-dashboard'
-  spec.version       = Neighborly::Dashboard::VERSION
-  spec.authors       = ['Josemar Luedke']
-  spec.email         = ['josemarluedke@gmail.com']
-  spec.summary       = 'This is the Neighbor.ly Dashboard'
-  spec.description   = 'The Dashboard is the place where you manage your Neighbor.ly'
-  spec.homepage      = 'https://github.com/neighborly/neighborly-dashboard'
+  spec.name          = 'dune-dashboard'
+  spec.version       = Dune::Dashboard::VERSION
+  spec.authors       = ['Legrand Pierre']
+  spec.email         = ['legrand.work@gmail.com']
+  spec.summary       = 'This is the dune Dashboard coming from neighborly'
+  spec.description   = 'The Dashboard is the place where you manage your dune'
+  spec.homepage      = 'https://github.com/FromUte/dune-dashboard'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")

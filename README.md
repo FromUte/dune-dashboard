@@ -1,10 +1,8 @@
-# Neighborly::Dashboard
-
-[![Build Status](https://travis-ci.org/neighborly/neighborly-dashboard.svg?branch=master)](https://travis-ci.org/neighborly/neighborly-dashboard)
+# Dune::Dashboard
 
 ## What
 
-This is the implementation of [Neighborly](https://github.com/neighborly/neighborly)'s Dashboard. It is built using [Ember.js](http://emberjs.com) on top of a Rails Engine.
+This is the implementation of [Dune](https://github.com/FromUte/dune-investissement)'s Dashboard. It is built using [Ember.js](http://emberjs.com) on top of a Rails Engine. It's come from neighborly-dashboard
 
 ## How
 
@@ -12,22 +10,22 @@ Include this gem as dependency of your project, adding the following line in you
 
 ```ruby
 # Gemfile
-gem 'neighborly-dashboard'
+gem 'dune-dashboard'
 ```
 
-Neighborly::Dashboard is a Rails Engine, integrating with your ([Neighborly](https://github.com/neighborly/neighborly)) Rails application with very little of effort. To turn the engine on, mount it in an appropriate route:
+Dune::Dashboard is a Rails Engine, integrating with your ([Dune](https://github.com/FromUte/dune-investissement)) Rails application with very little of effort. To turn the engine on, mount it in an appropriate route:
 
 ```ruby
 # config/routes.rb
-mount Neighborly::Dashboard::Engine => '/dashboard/', as: :neighborly_dashboard
+mount Dune::Dashboard::Engine => '/dashboard/', as: :dune_dashboard
 ```
 
-Note that your neighbor.ly app needs to provide the API for the Dashboard. You can find the [Neighbor.ly API here](https://github.com/neighborly/neighborly-api).
+Note that your dune app needs to provide the API for the Dashboard. You can find the [dune API here](https://github.com/FromUte/dune-api).
 
 
 ## Contributing
 
-1. Fork it ( https://github.com/neighborly/neighborly-dashboard/fork )
+1. Fork it ( https://github.com/FromUte/dune-dashboard/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

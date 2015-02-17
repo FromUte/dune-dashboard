@@ -12,11 +12,11 @@ FIXTURES.user = (id = 1)->
     profile_type: "personal"
     twitter_url: null
     name: "Foo Bar"
-    image_url: "http://neighbor.ly/uploads/user/uploaded_image/18/thumb_avatar_image.jpg"
+    image_url: "http://www.dune-investissement/uploads/user/uploaded_image/18/thumb_avatar_image.jpg"
     total_contributed: "70.0"
     admin: true
-    url: "http://neighbor.ly/api/contributions/18"
-    html_url: "http://neighbor.ly/neighbors/18-mrs-abigayle-gaylord"
+    url: "http://www.dune-investissement/api/contributions/18"
+    html_url: "http://www.dune-investissement/neighbors/18-mrs-abigayle-gaylord"
 
 FIXTURES.users = (page = 3)->
   users: [FIXTURES.user(1).user, FIXTURES.user(2).user]

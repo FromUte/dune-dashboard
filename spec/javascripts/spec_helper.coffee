@@ -27,10 +27,10 @@
 #
 # You can require your own javascript files here. By default this will include everything in application, however you
 # may get better load performance if you require the specific files that are being used in the test that tests them.
-#= require neighborly-dashboard-libs
+#= require dune-dashboard-libs
 #= require ember-simple-auth/simple-auth-testing.js
-#= require neighborly-dashboard-application
-#= require neighborly-dashboard-templates
+#= require dune-dashboard-application
+#= require dune-dashboard-templates
 #= require_tree ./support/
 #= require_tree ./helpers/
 #= require_tree ./fixtures
