@@ -1,0 +1,16 @@
+fr:
+  layouts:
+    sidebar:
+      dashboard: 'Dashboard'
+      projects: 'Projects'
+      contributions: 'Contributions'
+      users: 'Users'
+      channels: 'Channels'
+      tags: 'Tags'
+      press_assets: 'Press Assets'
+      contacts: 'Contacts'
+      reports: 'Reports'
+      financial: 'Financial'
+    header:
+      profile: 'Profile'
+      sign_out: 'Sign out'

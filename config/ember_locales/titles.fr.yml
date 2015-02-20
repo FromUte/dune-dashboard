@@ -1,0 +1,22 @@
+fr:
+  titles:
+    application: 'dune-investissement'
+    index: 'Dashboard'
+    projects:
+      index: 'Projects'
+    tags:
+      new: 'New Tag'
+      index: 'Tags'
+      edit: 'Edit Tag'
+    press_assets:
+      new: 'New Press Asset'
+      index: 'Press Assets'
+      edit: 'Edit Press Asset'
+    users:
+      index: 'Users'
+    contributions:
+      index: 'Contributions'
+    channels:
+      index: 'Channels'
+      new: 'Add New Channel'
+      edit: 'Edit Channel'

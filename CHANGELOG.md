@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.3
+Local update
+
 ## 1.0.1
 update ember gemfile
 

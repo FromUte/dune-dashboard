@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dune-dashboard (1.0.1)
+    dune-dashboard (1.0.2)
       bootstrap-sass
       coffee-rails
       ember-rails (~> 0.16.4)
@@ -51,7 +51,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
-    autoprefixer-rails (5.1.6)
+    autoprefixer-rails (5.1.7)
       execjs
       json
     barber (0.6.0)

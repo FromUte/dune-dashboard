@@ -1,0 +1,33 @@
+fr:
+  projects:
+    index:
+      tabs:
+        online: 'Online'
+        soon: 'Soon'
+        draft: 'Draft'
+        rejected: 'Rejected'
+        successful: 'Successful'
+        failed: 'Failed'
+        waiting_funds: 'Waiting Funds'
+      table:
+        name: 'Name'
+        user: 'User'
+        goal: 'Goal'
+        pledged: 'Pledged'
+        expires_at: 'Expires at'
+        state: 'State'
+        recommended: 'Recommended - '
+        featured: 'Featured - '
+        home_page: 'Home Page - '
+      actions:
+        approve: 'Approve!'
+        launch: 'Launch!'
+        reject: 'Reject!'
+        push_to_draft: 'Sent to Draft!'
+        push_to_trash: 'Sent to Trash!'
+        are_you_sure_to_launch: 'Are you sure you want to launch this project?'
+      search:
+        query: 'Search'
+        between_created_at: 'Creation Date'
+        between_expires_at: 'Expiration Date'
+        between_online_date: 'Active Date'

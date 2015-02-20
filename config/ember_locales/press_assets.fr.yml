@@ -1,0 +1,14 @@
+fr:
+  press_assets:
+    form:
+      title: 'Title'
+      url: 'Url'
+      image: 'Image'
+    index:
+      new: 'Add a new Press Asset'
+      tabs:
+        all: 'All Press Assets'
+      table:
+        title: 'Title'
+        url: 'Url'
+        image: 'Image'
