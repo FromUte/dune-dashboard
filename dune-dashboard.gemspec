@@ -23,6 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'coffee-rails', '>= 0'
   spec.add_dependency 'bootstrap-sass', '>= 0'
   spec.add_dependency 'font-awesome-sass', '~> 4.2'
-  spec.add_dependency 'ember-rails', '~> 0.15'
-  spec.add_dependency 'emblem-rails', '~> 0.2'
+  spec.add_dependency 'ember-rails', '~> 0.16.4'
+  spec.add_dependency 'emblem-rails', '~> 0.2.2'
 end
